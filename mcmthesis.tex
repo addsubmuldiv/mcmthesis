@@ -28,15 +28,33 @@
 %% 
 \documentclass{mcmthesis}
 \mcmsetup{CTeX = false,   % 使用 CTeX 套装时，设置为 true
-        tcn = 0000, problem = A,
+        tcn = 1234, problem = A,
         sheet = true, titleinsheet = true, keywordsinsheet = true,
         titlepage = false, abstract = true}
 \usepackage{palatino}
+\usepackage{booktabs}
 \usepackage{lipsum}
 \title{The \LaTeX{} Template for MCM Version \MCMversion}
 \author{\small \href{http://www.latexstudio.net/}
   {\includegraphics[width=7cm]{mcmthesis-logo}}}
 \date{\today}
+
+\renewcommand\arraystretch{1.5}
+\newcolumntype{I}{!{\vrule width 1.2pt}}
+\newlength\savedwidth
+\newcommand\whline{\noalign{\global\savedwidth\arrayrulewidth
+                            \global\arrayrulewidth 3pt}%
+                   \hline
+                   \noalign{\global\arrayrulewidth\savedwidth}}
+\newlength\savewidth
+\newcommand\shline{\noalign{\global\savewidth\arrayrulewidth
+                            \global\arrayrulewidth 1.5pt}%
+                   \hline
+                   \noalign{\global\arrayrulewidth\savewidth}}
+
+
+
+
 % 以上导言区
 \begin{document}
 \begin{abstract}
@@ -90,7 +108,25 @@ keyword1; keyword2
 \section{General Assumptions and Variable Description}
 \subsection{General Assumptions}
 \subsection{Variable Description}
-
+% 表格
+\begin{table}[]
+  \centering
+  \caption{My caption}
+  \label{my-label}
+  \setlength{\tabcolsep}{7mm}{
+  \begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l}
+  \shline
+  \multicolumn{2}{lI}{\textbf{asasd}} & \multicolumn{10}{l}{\textbf{ssssssssssssssssssssss}} \\ \hline
+  \multicolumn{2}{lI}{dddd}           & \multicolumn{10}{l}{ddddddddddddddddddddd}           \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \shline
+  \end{tabular}}
+  \end{table}  
 
 \section{Analysis of the Problem}
 \subsection{Restatement of the Problem}
@@ -117,59 +153,52 @@ keyword1; keyword2
 %   {\mathrm{d} t}\frac{C_{I}}{I} \eqno (3)
 % \]
 
-\lipsum[10]
 
-\[
-  \arcsin \theta  =
-  \mathop{{\int\!\!\!\!\!\int\!\!\!\!\!\int}\mkern-31.2mu
-  \bigodot}\limits_\varphi
-  {\mathop {\lim }\limits_{x \to \infty } \frac{{n!}}{{r!\left( {n - r}
-  \right)!}}} \eqno (1)
-\]
 
-\section{Calculating and Simplifying the Model  }
-\lipsum[11]
 
-\section{The Model Results}
-\lipsum[6]
 
-\section{Validating the Model}
-\lipsum[9]
 
-\section{Conclusions}
-\lipsum[6]
+\section{Model Testing}
 
-\section{A Summary}
-\lipsum[6]
+\section{Sensitivity Analysis}
+\subsection{Impact of x}
+\subsection{Impact of y}
 
-\section{Evaluate of the Mode}
+\section{Strengths and Weaknesses}
+\subsection{Strengths of Models}
+\subsubsection{Inclusive}
+\subsubsection{Quantification}
+\subsubsection{Simple but Universal}
+\subsubsection{Visible and Understandable}
+\subsection{Weaknesses of Models}
+\subsubsection{Accuracy Relies on Statistics}
+\subsubsection{Xxx Is Not Included}
+\subsubsection{DDDDDDDDDDDDDDDDDDD}
+To begin with, we searched a large number of papers that discuss the spread of
+Ebola to help us deepen the understanding of the problem. Chowell et al. provided a
+large amount of background information and their work [6] served as an important
+introduction. We found that a few of the papers used the traditional epidemic model to
+predict the transmission of the disease such as the SEIR model used by Althaus [11] to
+estimate the reproduction number of the virus\cite{bib1,bib2} during the 2014 outbreak. Therefore, we
+also applied the SEIR model in the early stage to predict the spread of Ebola. Later, we
+found out that the Ebola virus has some specific feathers that also needed to be
+considered and that are, the potential transmission threat posed by the highly infectious
+corpses, the improved infection control and reduced transmission rate if patients can be
+treated in hospitals, and the powerful intervention method: contact tracing. After taking
+all these critical factors into consideration, we improved our original epidemic model.
 
-\section{Strengths and weaknesses}
-\lipsum[12]
-
-\subsection{Strengths}
-\begin{itemize}
-\item \textbf{Applies widely}\\
-This  system can be used for many types of airplanes, and it also
-solves the interference during  the procedure of the boarding
-airplane,as described above we can get to the  optimization
-boarding time.We also know that all the service is automate.
-\item \textbf{Improve the quality of the airport service}\\
-Balancing the cost of the cost and the benefit, it will bring in
-more convenient  for airport and passengers.It also saves many
-human resources for the airline. \item \textbf{}
-\end{itemize}
-
+% 论文引用
 \begin{thebibliography}{99}
-\bibitem{1} D.~E. KNUTH   The \TeX{}book  the American
+\bibitem{bib1} D.~E. KNUTH   The \TeX{}book  the American
 Mathematical Society and Addison-Wesley
 Publishing Company , 1984-1986.
-\bibitem{2}Lamport, Leslie,  \LaTeX{}: `` A Document Preparation System '',
+\bibitem{bib2}Lamport, Leslie,  \LaTeX{}: `` A Document Preparation System '',
 Addison-Wesley Publishing Company, 1986.
-\bibitem{3}\url{http://www.latexstudio.net/}
-\bibitem{4}\url{http://www.chinatex.org/}
+\bibitem{bib3}\url{http://www.latexstudio.net/}
+\bibitem{bib4}\url{http://www.chinatex.org/}
 \end{thebibliography}
 
+% 附录
 \begin{appendices}
 
 \section{First appendix}
