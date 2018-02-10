@@ -28,12 +28,13 @@
 %% 
 \documentclass{mcmthesis}
 \mcmsetup{CTeX = false,   % 使用 CTeX 套装时，设置为 true
-        tcn = 86483, problem = E,
+        tcn = 1234, problem = A,
         sheet = true, titleinsheet = true, keywordsinsheet = true,
         titlepage = false, abstract = true}
 \usepackage{palatino}
 \usepackage{booktabs}
 \usepackage{lipsum}
+\usepackage{wrapfig}
 \title{The \LaTeX{} Template for MCM Version \MCMversion}
 \author{\small \href{http://www.latexstudio.net/}
   {\includegraphics[width=7cm]{mcmthesis-logo}}}
@@ -105,38 +106,33 @@ keyword1; keyword2
 \subsection{Our Work}
 
 
-
+\section{General Assumptions and Variable Description}
+\subsection{General Assumptions}
+\subsection{Variable Description}
 % 表格
-% \begin{table}[]
-%   \centering
-%   \caption{My caption}
-%   \label{my-label}
-%   \setlength{\tabcolsep}{7mm}{
-%   \begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l}
-%   \shline
-%   \multicolumn{2}{lI}{\textbf{asasd}} & \multicolumn{10}{l}{\textbf{ssssssssssssssssssssss}} \\ \hline
-%   \multicolumn{2}{lI}{dddd}           & \multicolumn{10}{l}{ddddddddddddddddddddd}           \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \shline
-%   \end{tabular}}
-%   \end{table}  
+\begin{table}[]
+  \centering
+  \caption{My caption}
+  \label{my-label}
+  \setlength{\tabcolsep}{7mm}{
+  \begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l}
+  \shline
+  \multicolumn{2}{lI}{\textbf{asasd}} & \multicolumn{10}{l}{\textbf{ssssssssssssssssssssss}} \\ \hline
+  \multicolumn{2}{lI}{dddd}           & \multicolumn{10}{l}{ddddddddddddddddddddd}           \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \shline
+  \end{tabular}}
+  \end{table}  
 
 \section{Analysis of the Problem}
 \subsection{Restatement of the Problem}
 \subsection{Data Analysis}
 \subsection{Research Method}
-
-
-
-
-\section{General Assumptions and Variable Description}
-\subsection{General Assumptions}
-\subsection{Variable Description}
 % 插图
 % \begin{figure}[h]
 % \small
@@ -179,6 +175,12 @@ keyword1; keyword2
 \subsubsection{Accuracy Relies on Statistics}
 \subsubsection{Xxx Is Not Included}
 \subsubsection{DDDDDDDDDDDDDDDDDDD}
+% 图文混排
+% \begin{wrapfigure}{l}{4.5cm}%靠文字内容的左侧
+%   \includegraphics[width=4cm]{test1.jpg}\\
+%   \caption{Podala Palace, Tibet}\label{fig:tibet}
+%   \end{wrapfigure}
+
 To begin with, we searched a large number of papers that discuss the spread of
 Ebola to help us deepen the understanding of the problem. Chowell et al. provided a
 large amount of background information and their work [6] served as an important
