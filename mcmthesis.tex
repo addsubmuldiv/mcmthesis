@@ -24,7 +24,7 @@
 %% 
 %% This work has the LPPL maintenance status `maintained'.
 %% 
-%% The Current Maintainer of this work is Liam Huang.
+%% The Current Maintainer of this work is Liam Huang
 %% 
 \documentclass{mcmthesis}
 \mcmsetup{CTeX = false,   % 使用 CTeX 套装时，设置为 true
@@ -35,6 +35,11 @@
 \usepackage{booktabs}
 \usepackage{lipsum}
 \usepackage{wrapfig}
+\usepackage{geometry}
+% 这两行可以让点击图片引用显示整个图片，而不是只有字
+\usepackage{caption}
+\captionsetup{hypcap=true}
+
 \title{The \LaTeX{} Template for MCM Version \MCMversion}
 \author{\small \href{http://www.latexstudio.net/}
   {\includegraphics[width=7cm]{mcmthesis-logo}}}
@@ -54,8 +59,8 @@
                    \noalign{\global\arrayrulewidth\savewidth}}
 
 
-
-
+% \geometry{left=2.0cm,right=2.0cm,top=2.5cm,bottom=2.5cm}
+\geometry{top=2.5cm,bottom=2.5cm}
 % 以上导言区
 \begin{document}
 \begin{abstract}
@@ -67,7 +72,6 @@ keyword1; keyword2
 \maketitle
 \tableofcontents
 % \newpage
- 
 
 % \lipsum[2]
 % \begin{itemize}
@@ -100,14 +104,107 @@ keyword1; keyword2
 % \begin{proof}
 % The proof of theorem.
 % \end{proof}
+\newpage
 \section{Introduction}
 \subsection{Background}
-\subsection{Restatement of the Problem}
-\subsection{Our Work}
+Climate is the most important environmental condition for human activities.
+Climate change has had a negative impact on the ecological environment in 
+many countries and regions. It is estimated that if the coastal population 
+increases and the sea level rises by 40 cm, the number of people affected by 
+flood disasters will increase by 75 million to 206 million each year, 90\% of
+which are in Africa and Asia. Poor people's ability to adapt to climate change 
+are limited by livelihood assets and livelihood pressure. High frequency of
+extreme weather events will reduce the recovery time of poverty population, 
+and keep them in a fragile state for a long time. Some underdeveloped 
+countries not only have to deal with the risks posed by climate change, 
+but also have to deal with the impact of economic globalization, 
+and are more vulnerable to failure.This phenomenon is called vulnerability.\\\\
+In recent years, many international organizations have conducted vulnerability 
+assessments in developing countries. The United States Agency for International
+Development (USAID) famine warning system focuses on the vulnerability of 
+food security in African regions.The Vulnerability Assessment committee(VAC) 
+evaluated the comprehensive vulnerability of six African countries food safety 
+and living condition. The Department for International Development (DFID)
+focuses on rural sustainable Development and poverty alleviation in developing
+countries. Vulnerability assessment is helpful for scientists and 
+policymakers to understand the influence of environmental changes, 
+to explore potential factors hinder the social effective response, 
+to understand the vulnerable population distribution and the causes 
+of vulnerability, and find out the ways to reduce vulnerability and 
+increase the adaptability.\\\\
+At present, many studies devote to evaluate natural ecosystem vulnerability, 
+and has built many widely used quantitative methods,to figure out the 
+vulnerability level and distribution of the natural ecological system, 
+to predict the adaptation of natural ecosystems to risk in the future.However, 
+scientists, policymakers, and ngos tend to focus more on regional 
+vulnerability assessments, in order to connect with decisions. Different 
+from the natural ecosystem, region is a natural-economic-social complex 
+system, so the fragility of the natural ecosystem does not necessarily lead 
+to a vulnerable. Human suffer from environmental impact and risk, such as 
+natural disasters and limited resources, meanwhile,they adapt and transform 
+the natural environment, using natural material and energy to develop itself.
+Due to the complexity of the system in the region, it is difficult to 
+quantitatively assess its vulnerability thus causing a gap in widely-used 
+quantitative method.In the context of climate change, the situation in some
+less-developed regions of the world will be severely affected, so it is 
+particularly urgent to identify vulnerable areas and take measures to 
+address them.
 
+
+\subsection{Restatement of the Problem}
+A fragile state inherently exists vulnerability of natural conditions 
+like natural disasters, the decrease of the cultivated land, unpredictable 
+weather and rising temperature.coupled with the turbulent political situation, 
+backward economic development, poor sanitation, the condition will get worse. 
+Therefore, when considering the impact of climate on national vulnerability, 
+it is not possible to consider only one single factor of climate, but also to
+consider the joint role of economic, political and social factors.\\\\
+However, various aspects, including climate pressure will not necessarily 
+make a country vulnerable. If a country has a strong government and a high 
+level of economy, the country will have a strong ability to adapt to respond
+to climate change. As a result, countries are less vulnerable to climate 
+change. It appears that the vulnerability of a country is not only affected
+by external pressure, but more depends on the country's ability to fight 
+against external pressure. In the process of modeling, we must give full 
+consideration to country's ability to resist pressure and adapt.
+\subsection{Our Work}
+  \textbf{Work\_1, clear the definition of vulnerability and research object:} We 
+  define vulnerability as the degree to which the system is susceptible to adverse effects 
+  and lack of the ability to cope with adverse effects. We also define that vulnerability 
+  is a function of sensitivity and adaptability. We will explain these two concepts 
+  (sensitivity and adaptability) below.\\ We regard the overall vulnerability of 
+  countries as a \textbf{natural-economic-social composite system} under the influence of 
+  multiple factors. The vulnerability of the country is related to the country's 
+  climate sensitivity index, economic development status, social stability and 
+  other factors.\\\\
+  \textbf{Work\_2, collect data on factors affecting national vulnerability:} The data we
+  collect include sensitivity data (Extreme weather、Average precipitation in depth、Climate
+  sensitivity index、Food security index、National risk index、Health index、mortality、
+  Crime index、global firepower index, hunger index,  proportion of agricultural output 
+  in GDP, ethnic diversity and refugee Numbers) and adaptability data(GDP per capita, 
+  Poeple's Fredom index, Government Effectiveness index, Political Stability index).\\\\
+  \textbf{Work\_3, calculate the correlation between climate and other factors:} we 
+  calculate the relevance of various factors about economic, political, social 
+  and climatic that can affect the vulnerability of the country, then choose 
+  factors that are clearly relevant to climate，and \textbf{explain why and how the 
+  climate affects these facts}.
+
+
+
+
+\section{Analysis of Problem}
 
 \section{General Assumptions and Data Analysis}
 \subsection{General Assumptions}
+\begin{itemize}
+  \item We ignore the effects of individual factors on the model caused by year inconsistency.
+  \item We assume that the overall vulnerability of the country is only determined by national sensitivity and adaptability.
+  \item We assume that countries sensitivity index is determined only by extreme weather、average precipitation in depth、climate sensitivity index、food security index、national risk index、health index、mortality、arime index、global firepower index, hunger index,  proportion of agricultural output in GDP, ethnic diversity and refugee Numbers.
+  \item We assume that national adaptability is determined only by GDP per capita, Poeple's Fredom index, Government Effectiveness index, Political Stability index.
+  \item We assume that the factors other are independent and non-interference, but climate is not included.
+  \item We assume that vulnerability can be effectively quantified by the above data.
+  \item We assume that the data we collect is true and valid.
+\end{itemize}
 \subsection{Data Analysis}
 % 表格
 % \begin{table}[]
@@ -156,7 +253,35 @@ keyword1; keyword2
 
 
 
-
+\section{Fragile State Neural Network Model}
+The study of national vulnerability indicators requires strong professional
+background knowledge, but we can't derive the relationship between climate
+and vulnerability through an intuitive approach from the data given in the 
+problem. So, through collecting data, by using the strong self-organization, 
+self-adaptive and self-learning ability of neural network, the nonlinear 
+mapping of independent variables and national fragility can be completed 
+without fully understanding the relationship among climate, politics, 
+economy and national fragility. Combined with the above considerations, 
+We established a neural network to derive a national vulnerability model 
+including climatic factors.
+\subsection{Model building}
+\subsubsection{Introduction to the principle of BP neural network}
+BP Neural Network is a kind of multi-layer feedforward neural network, 
+which is mainly characterized by forward transmission and deviation back 
+propagation.In forward transmission, the input signal is processed from 
+the input layer through the hidden layer to the output layer.The state of 
+each layer of neurons affects only the next layer of neurons.If the output 
+layer does not get the desired output, it is transferred to the reverse 
+propagation, and the network weight and threshold are adjusted according 
+to the predicted error, so that the BP neural network prediction output 
+is constantly approaching the expected output. A simple BP Neural Network 
+is like Figure \ref{fig:nn} as follow.
+\begin{figure}[h]
+\small
+\centering
+\includegraphics[width=10cm]{neuralNetwork.png}
+\caption{Neural Network} \label{fig:nn}
+\end{figure}
 
 \section{Model Testing}
 
