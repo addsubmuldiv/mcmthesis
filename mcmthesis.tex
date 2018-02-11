@@ -187,11 +187,30 @@ consideration to country's ability to resist pressure and adapt.
   calculate the relevance of various factors about economic, political, social 
   and climatic that can affect the vulnerability of the country, then choose 
   factors that are clearly relevant to climate,and \textbf{explain why and how the 
-  climate affects these facts}.
-
-
-
-
+  climate affects these facts}.\\\\
+  \textbf{Work\_4, build a model to measure a country's vulnerability:} Using the data 
+  we collected and the data presented in the topic, we established the neural network 
+  model. By taking various data(including climate factors) as the input into the model, 
+  we can get the sensitivity and adaptability values. Through the function of 
+  vulnerability and sensitivity and adaptability, the vulnerability value and the 
+  vulnerability level can be obtained. Through our model, we can see \textbf{the direct 
+  impact of vulnerability caused by climate change}.The influence of climate on other 
+  factors in work\_3 shows \textbf{the indirect effect of vulnerability of the caused by 
+  climate change}.\\\\
+  \textbf{Work\_5, choose one country from the top ten ranking, determine how climate 
+  factors affect its vulnerability:} We take data of XXX country to determine the 
+  influence of climate factors on the overall vulnerability of the country.\\\\ 
+  \textbf{Work\_6, choose one country apart from the top ten ranking, determine how 
+  climate factors affect its vulnerability.}\\\\
+  \textbf{Work\_7, Identify indicators of national vulnerability:} We grade each 
+  climate factor(extreme weather, average precipitation depth, climate 
+  sensitivity index) .The country's vulnerability level is determined 
+  by these three factors and is shown through by a list.\\\\
+  \textbf{work\_8, sum up intervention measurements that can mitigate the risk of climate change.}\\\\
+  \textbf{work\_9, evaluate the application scope of the model:} We select a country with large 
+  territory (such as Australia) and a country with a smaller territory (e.g., 
+  XXX) to evaluate the application scope of the model. And modify the model 
+  to make it applicable to more general situations.
 \section{Analysis of Problem}
 
 \section{General Assumptions and Data Analysis}
@@ -292,13 +311,38 @@ is like Figure \ref{fig:nn} as follow.
 
 \section{Strengths and Weaknesses}
 \subsection{Strengths of Models}
-\subsubsection{Inclusive}
-\subsubsection{Quantification}
-\subsubsection{Simple but Universal}
-\subsubsection{Visible and Understandable}
+\begin{itemize}
+  \item \textbf{Inclusive:} Our model contains two large indicators (sensitivity and adaptability), and 
+  considers of the state's ability to intervene in natural factors such as climate. 
+  Our model incorporates all aspects of the vulnerability index. The small indicators 
+  in the two big indexes(sensitivity and adaptability) are composed of various political, 
+  economic, climate and social sectors.
+  \item \textbf{Quantification:} Our model can output a numerical value to quantify the vulnerability of a country. 
+  The use of Numbers is more intuitive and more conducive to contrast, which can clearly 
+  reflect changes of the vulnerability when input parameters change.
+  \item \textbf{Simple but Universal:} We use the neural network model, which is relatively simple, also does not break 
+  generality. If there is enough training data, each country's vulnerability index 
+  can be figured out  accurate.
+  \item \textbf{Visible and Understandable:} We used the plotly library of python to present the model and data 
+  intuitively in the form of line graphs, which is more visualized and 
+  easier to understand.
+\end{itemize}
+
+
 \subsection{Weaknesses of Models}
-\subsubsection{Accuracy Relies on Statistics}
-\subsubsection{Xxx Is Not Included}
+\begin{itemize}
+  \item \textbf{Accuracy Relies on Statistics:} The accuracy of our model 
+  depends not only on the reliability of the data itself, but also on the 
+  number of training data. The more the training data has, 
+  the more accurate the model is.
+  \item \textbf{Not a long-term and dynamic model:} Our model is a static 
+  model focusing on short-term changes. But, on the contrast, the factors 
+  that affect vulnerability are long-term, dynamic and highly uncertain. 
+  In terms of long-term time scale, we need to focus on future risks, and 
+  we need to consider the dynamic assessment framework that changes with time. 
+\end{itemize}
+
+
 % 图文混排
 % \begin{wrapfigure}{l}{4.5cm}%靠文字内容的左侧
 %   \includegraphics[width=4cm]{test1.jpg}\\
