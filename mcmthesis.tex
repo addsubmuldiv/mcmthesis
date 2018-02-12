@@ -57,7 +57,8 @@
                             \global\arrayrulewidth 1.5pt}%
                    \hline
                    \noalign{\global\arrayrulewidth\savewidth}}
-
+% 让引用变成右上标形式，使用\upcite
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
 
 % \geometry{left=2.0cm,right=2.0cm,top=2.5cm,bottom=2.5cm}
 \geometry{top=2.5cm,bottom=2.5cm}
@@ -294,7 +295,7 @@ layer does not get the desired output, it is transferred to the reverse
 propagation, and the network weight and threshold are adjusted according 
 to the predicted error, so that the BP neural network prediction output 
 is constantly approaching the expected output. A simple BP Neural Network 
-is like Figure \ref{fig:nn} as follow.
+is like Figure \ref{fig:nn} as follow.\upcite{bib20}
 \begin{figure}[h]
 \small
 \centering
@@ -302,6 +303,54 @@ is like Figure \ref{fig:nn} as follow.
 \caption{a BP Neural Network} 
 \label{fig:nn}
 \end{figure}
+
+
+\subsubsection{Data preprocessing}
+Based on our hypothesis, the fragility of a country is related to its 
+sensitivity and adaptability. Sensitivity and adaptability are closely 
+related to economic conditions, political conditions, social conditions and 
+climate change, and can be quantified with a numerical value. The sensitivity 
+may be composed of extreme weather, the average depth of precipitation, the 
+climate sensitivity index, the index of food security, the country risk index, 
+the index of health, mortality, crime, global power index, hunger, agricultural 
+development index, the number of ethnic diversity and refugees. Due to a variety 
+of data among different indicators, some data are often hundreds of thousands of, 
+and some data is within the scope of a single wave, so we each data respectively 
+for the normalized processing, allow them to operations in the same numerical range, 
+convenient for our model. The normalization method is as follows:
+\[ y=\frac{\left ( y_{max}-y_{min} \right )\left ( x-x_{min} \right )}{x_{max}-x_{min}}+y_{min} \]
+With the above formula, we can begin to build our model after the data we have 
+collected is normalized.This can be done by calling the transform() function 
+of sklearn.
+\subsubsection{Establish BP Neural Network}
+We used Google's machine learning framework, TensorFlow, to establish the BP 
+neural network structure of x-n-2, where X represents the input item (that is, 
+the data mentioned in the data analysis); N is the number of hidden layer neurons; 2 
+represents the output item (sensitivity and adaptability). The structure diagram is 
+as follows:
+\begin{figure}[h]
+\small
+\centering
+\includegraphics[width=12cm]{structure.png}
+\caption{Network Structure} 
+\label{fig:ns}
+\end{figure}
+We choose ReLU(Rectified Linear Unit) as hidden layer excitation function:
+\[ f=max\left ( 0,w^{T}x+b \right ) \]
+And linear function as the output layer Excitation function:
+\[ a=n \]
+The number of hidden layer neurons has a significant influence on 
+the prediction accuracy of BP neural network. If the number of 
+nodes is too few, the network will not learn well and the accuracy 
+will be not enough. If the number of nodes is too many, the 
+training time increases, the network is easy to be overfitting. 
+We refer to the following formula to determine the optimal number 
+of hidden layer neurons.
+\[ l< n-1 \]
+\[ l<\sqrt{m+n}+a \]
+\[ l=\log_{2} n \]
+
+
 
 \section{Model Testing}
 
@@ -349,20 +398,8 @@ is like Figure \ref{fig:nn} as follow.
 %   \caption{Podala Palace, Tibet}\label{fig:tibet}
 %   \end{wrapfigure}
 
-To begin with, we searched a large number of papers that discuss the spread of
-Ebola to help us deepen the understanding of the problem. Chowell et al. provided a
-large amount of background information and their work [6] served as an important
-introduction. We found that a few of the papers used the traditional epidemic model to
-predict the transmission of the disease such as the SEIR model used by Althaus [11] to
-estimate the reproduction number of the virus\cite{bib1,bib2} during the 2014 outbreak. Therefore, we
-also applied the SEIR model in the early stage to predict the spread of Ebola. Later, we
-found out that the Ebola virus has some specific feathers that also needed to be
-considered and that are, the potential transmission threat posed by the highly infectious
-corpses, the improved infection control and reduced transmission rate if patients can be
-treated in hospitals, and the powerful intervention method: contact tracing. After taking
-all these critical factors into consideration, we improved our original epidemic model.
-
 % 论文引用
+\newpage
 \begin{thebibliography}{99}
 \bibitem{bib1} Average precipitation in depth, The World Bank, \\ https://data.worldbank.org/indicator/AG.LND.PRCP.MM?name\_desc=false, 2017.
 \bibitem{bib2} Droughts, floods, extreme temperatures (\% of population, average 1990-2009), The World Bank, https://data.worldbank.org/indicator/EN.CLC.MDAT.ZS, 1990-2009.
