@@ -1,31 +1,3 @@
-%%
-%% This is file `mcmthesis-demo.tex',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% mcmthesis.dtx  (with options: `demo')
-%% 
-%% -----------------------------------
-%% 
-%% This is a generated file.
-%% 
-%% Copyright 
-%%     2010 -- 2015 by Zhaoli Wang
-%%     2014 -- 2016 by Liam Huang
-%% 
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%   http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2005/12/01 or later.
-%% 
-%% This work has the LPPL maintenance status `maintained'.
-%% 
-%% The Current Maintainer of this work is Liam Huang
-%% 
 \documentclass{mcmthesis}
 \mcmsetup{CTeX = false,   % 使用 CTeX 套装时,设置为 true
         tcn = 86483, problem = E,
@@ -34,10 +6,12 @@
 \usepackage{palatino}
 \usepackage{booktabs}
 \usepackage{lipsum}
+\usepackage{float}
 \usepackage{wrapfig}
-\usepackage{geometry}
+\usepackage{geometry}%页面设置  
+\usepackage{graphics}%图片设置  
 % 这两行可以让点击图片引用显示整个图片,而不是只有字
-\usepackage{caption}
+\usepackage{caption}%注释设置
 \captionsetup{hypcap=true}
 
 \title{The \LaTeX{} Template for MCM Version \MCMversion}
@@ -74,28 +48,6 @@ keyword1; keyword2
 \tableofcontents
 % \newpage
 
-% \lipsum[2]
-% \begin{itemize}
-% \item minimizes the discomfort to the hands, or
-% \item maximizes the outgoing velocity of the ball.
-% \end{itemize}
-% We focus exclusively on the second definition.
-
-% \begin{itemize}
-% \item the initial velocity and rotation of the ball,
-% \item the initial velocity and rotation of the bat,
-% \item the relative position and orientation of the bat and ball, and
-% \item the force over time that the hitter hands applies on the handle.
-% \end{itemize}
-% \lipsum[3]
-% \begin{itemize}
-% \item the angular velocity of the bat,
-% \item the velocity of the ball, and
-% \item the position of impact along the bat.
-% \end{itemize}
-% \lipsum[4]
-% \emph{center of percussion} [Brody 1986], \lipsum[5]
-
 % \begin{Theorem} \label{thm:latex}
 % \LaTeX
 % \end{Theorem}
@@ -119,34 +71,34 @@ extreme weather events will reduce the recovery time of poverty population,
 and keep them in a fragile state for a long time. Some underdeveloped 
 countries not only have to deal with the risks posed by climate change, 
 but also have to deal with the impact of economic globalization, 
-and are more vulnerable to failure. This phenomenon is called vulnerability.\\\\
-In recent years, many international organizations have conducted vulnerability 
+and are more vulnerable to failure. This phenomenon is called fragility.\\\\
+In recent years, many international organizations have conducted fragility 
 assessments in developing countries. The United States Agency for International
-Development (USAID) famine warning system focuses on the vulnerability of 
-food security in African regions. The Vulnerability Assessment committee(VAC) 
-evaluated the comprehensive vulnerability of six African countries food safety 
-and living condition. The Department for International Development (DFID)
+Development (USAID) famine warning system focuses on the fragility of 
+food security in African regions. The fragility Assessment committee(VAC) 
+evaluated the comprehensive fragility of six African countries food safety 
+and living condition. The Department for International Development(DFID)
 focuses on rural sustainable Development and poverty alleviation in developing
-countries. Vulnerability assessment is helpful for scientists and 
+countries. Fragility assessment is helpful for scientists and 
 policymakers to understand the influence of environmental changes, 
 to explore potential factors hinder the social effective response, 
 to understand the vulnerable population distribution and the causes 
-of vulnerability, and find out the ways to reduce vulnerability and 
+of fragility, and find out the ways to reduce vulnerability and 
 increase the adaptability.
 \subsection{Previous Research}
-At present, many studies devote to evaluate natural ecosystem vulnerability, 
+At present, many studies devote to evaluate natural ecosystem fragility, 
 and has built many widely used quantitative methods,to figure out the 
-vulnerability level and distribution of the natural ecological system, 
+fragility level and distribution of the natural ecological system, 
 to predict the adaptation of natural ecosystems to risk in the future. However, 
 scientists, policymakers, and ngos tend to focus more on regional 
-vulnerability assessments, in order to connect with decisions. Different 
+fragility assessments, in order to connect with decisions. Different 
 from the natural ecosystem, region is a natural-economic-social complex 
 system, so the fragility of the natural ecosystem does not necessarily lead 
 to a vulnerable. Human suffer from environmental impact and risk, such as 
 natural disasters and limited resources, meanwhile,they adapt and transform 
 the natural environment, using natural material and energy to develop itself.
 Due to the complexity of the system in the region, it is difficult to 
-quantitatively assess its vulnerability thus causing a gap in widely-used 
+quantitatively assess its fragility thus causing a gap in widely-used 
 quantitative method. In the context of climate change, the situation in some
 less-developed regions of the world will be severely affected, so it is 
 particularly urgent to identify vulnerable areas and take measures to 
@@ -154,59 +106,60 @@ address them.
 
 
 \subsection{Restatement of the Problem}
-A fragile state inherently exists vulnerability of natural conditions 
+A fragile state inherently exists fragility of natural conditions 
 like natural disasters, the decrease of the cultivated land, unpredictable 
 weather and rising temperature. Coupled with the turbulent political situation, 
 backward economic development, poor sanitation, the condition will get worse. 
-Therefore, when considering the impact of climate on national vulnerability, 
+Therefore, when considering the impact of climate on national fragility, 
 it is not possible to consider only one single factor of climate, but also to
 consider the joint role of economic, political and social factors.\\\\
 However, various aspects, including climate pressure will not necessarily 
 make a country vulnerable. If a country has a strong government and a high 
 level of economy, the country will have a strong ability to adapt to respond
 to climate change. As a result, countries are less vulnerable to climate 
-change. It appears that the vulnerability of a country is not only affected
+change. It appears that the fragility of a country is not only affected
 by external pressure, but more depends on the country's ability to fight 
 against external pressure. In the process of modeling, we must give full 
 consideration to country's ability to resist pressure and adapt.
 \subsection{Our Work}
-  \textbf{Work\_1, clear the definition of vulnerability and research object:} We 
-  define vulnerability as the degree to which the system is susceptible to adverse effects 
-  and lack of the ability to cope with adverse effects. We also define that vulnerability 
+  \textbf{Work\_1, clear the definition of fragility and research object:} We 
+  define fragility as the degree to which the system is susceptible to adverse effects 
+  and lack of the ability to cope with adverse effects. We also define that fragility 
   is a function of sensitivity and adaptability. We will explain these two concepts 
-  (sensitivity and adaptability) below.\\ We regard the overall vulnerability of 
+  (sensitivity and adaptability) below.\\ We regard the overall fragility of 
   countries as a \textbf{natural-economic-social composite system} under the influence of 
-  multiple factors. The vulnerability of the country is related to the country's 
+  multiple factors. The fragility of the country is related to the country's 
   climate sensitivity index, economic development status, social stability and 
   other factors.\\\\
-  \textbf{Work\_2, collect data on factors affecting national vulnerability:} The data we
+  \textbf{Work\_2, collect data on factors affecting national fragility:} The data we
   collect include sensitivity data (Extreme weather、Average precipitation in depth、Climate
   sensitivity index、Food security index、National risk index、Health index、mortality、
   Crime index、global firepower index, hunger index,  proportion of agricultural output 
   in GDP, ethnic diversity and refugee Numbers) and adaptability data(GDP per capita, 
   Poeple's Fredom index, Government Effectiveness index, Political Stability index).\\\\
-  \textbf{Work\_3, calculate the correlation between climate and other factors:} we 
-  calculate the relevance of various factors about economic, political, social 
-  and climatic that can affect the vulnerability of the country, then choose 
-  factors that are clearly relevant to climate,and \textbf{explain why and how the 
-  climate affects these facts}.\\\\
-  \textbf{Work\_4, build a model to measure a country's vulnerability:} Using the data 
+  \textbf{Work\_3, calculate the correlation between climate and other factors:}  
+  we calculate the relevance of various factors about economic, political, social and climatic 
+  that can affect the fragility of the country, then choose factors that are clearly relevant 
+  to climate and \textbf{explain why and how the climate affects these facts}. We also calculate the 
+  correlation between various factors and fragility and explained \textbf{the indirect impact of 
+  climate change on national fragility} through the two correlations.
+  \textbf{Work\_4, build a model to measure a country's fragility:} Using the data 
   we collected and the data presented in the topic, we established the neural network 
   model. By taking various data(including climate factors) as the input into the model, 
   we can get the sensitivity and adaptability values. Through the function of 
-  vulnerability and sensitivity and adaptability, the vulnerability value and the 
-  vulnerability level can be obtained. Through our model, we can see \textbf{the direct 
-  impact of vulnerability caused by climate change}. The influence of climate on other 
-  factors in work\_3 shows \textbf{the indirect effect of vulnerability of the caused by 
+  fragility and sensitivity and adaptability, the vulnerability value and the 
+  fragility level can be obtained. Through our model, we can see \textbf{the direct 
+  impact of fragility caused by climate change}. The influence of climate on other 
+  factors in work\_3 shows \textbf{the indirect effect of fragility of the caused by 
   climate change}.\\\\
   \textbf{Work\_5, choose one country from the top ten ranking, determine how climate 
-  factors affect its vulnerability:} We take data of XXX country to determine the 
-  influence of climate factors on the overall vulnerability of the country.\\\\ 
+  factors affect its fragility:} We take data of XXX country to determine the 
+  influence of climate factors on the overall fragility of the country.\\\\ 
   \textbf{Work\_6, choose one country apart from the top ten ranking, determine how 
-  climate factors affect its vulnerability.}\\\\
-  \textbf{Work\_7, Identify indicators of national vulnerability:} We grade each 
+  climate factors affect its fragility.}\\\\
+  \textbf{Work\_7, Identify indicators of national fragility:} We grade each 
   climate factor(extreme weather, average precipitation depth, climate 
-  sensitivity index). The country's vulnerability level is determined 
+  sensitivity index). The country's fragility level is determined 
   by these three factors and is shown through by a list.\\\\
   \textbf{work\_8, sum up intervention measurements that can mitigate the risk of climate change.}\\\\
   \textbf{work\_9, evaluate the application scope of the model:} We select a country with large 
@@ -214,26 +167,26 @@ consideration to country's ability to resist pressure and adapt.
   XXX) to evaluate the application scope of the model. And modify the model 
   to make it applicable to more general situations.
 \section{Analysis of Problem}
-\subsection{How to define national vulnerability?}
-With the deepening of the research on vulnerability, the concept of vulnerability 
+\subsection{How to define national fragility?}
+With the deepening of the research on fragility, the concept of vulnerability 
 based on different subject background is also developing.\\\\
-Cutter divided the vulnerability research into three categories: first, the 
-vulnerability was considered as exposure; The second is to regard vulnerability 
+Cutter divided the fragility research into three categories: first, the 
+fragility was considered as exposure; The second is to regard vulnerability 
 as a social condition; The third is the combination of potential exposure 
-and social elasticity.\upcite{bib18} O 'brien has a similar division, "vulnerability 
-as a result" and "vulnerability as a precondition".\upcite{bib19} According to the 
+and social elasticity.\upcite{bib18} O 'brien has a similar division, "fragility 
+as a result" and "fragility as a precondition".\upcite{bib19} According to the 
 description of the data given in the title, we regard the state system as a 
-natural-economic-social complex system, and regard vulnerability as "the fragility 
-as the result". We classify national vulnerability factors as economic, political, 
+natural-economic-social complex system, and regard fragility as "the fragility 
+as the result". We classify national fragility factors as economic, political, 
 social, civic cohesion and climate change, each of which includes several detailed 
-indicators. We define vulnerability as the degree to which the system is susceptible 
+indicators. We define fragility as the degree to which the system is susceptible 
 to adverse effects and lack of the ability to cope with adverse effects. We also 
-define that vulnerability is a function of sensitivity and adaptability. 
+define that fragility is a function of sensitivity and adaptability. 
 Sensitivity is the degree to which the system is stimulated caused by multiple 
 realted factors. Adaptability is the ability of a system's internal activity, 
 process, structure to adapt to the external influence, and the ability to reduce 
 potential losses from climate change.
-\subsection{How to reflect the direct and indirect effects of climate change on national vulnerability?}
+\subsection{How to reflect the direct and indirect effects of climate change on national fragility?}
 Climate change can cause direct harm to people's living environment through natural 
 disasters.It can also affect agricultural production, thereby increasing 
 poverty and even starvation.If combined with weak government effectiveness, 
@@ -243,36 +196,37 @@ local wars, thus exacerbating the country's fragile state.
 \subsection{General Assumptions}
 \begin{itemize}
   \item We ignore the effects of individual factors on the model caused by year inconsistency.
-  \item We assume that the overall vulnerability of the country is only determined by national sensitivity and adaptability.
+  \item We assume that the overall fragility of the country is only determined by national sensitivity and adaptability.
   \item We assume that countries sensitivity index is determined only by extreme weather、average precipitation in depth、climate sensitivity index、food security index、national risk index、health index、mortality、arime index、global firepower index, hunger index,  proportion of agricultural output in GDP, ethnic diversity and refugee Numbers.
   \item We assume that national adaptability is determined only by GDP per capita, Poeple's Fredom index, Government Effectiveness index, Political Stability index.
   \item We assume that the factors other are independent and non-interference, but climate is not included.
-  \item We assume that vulnerability can be effectively quantified by the above data.
+  \item We assume that fragility can be effectively quantified by the above data.
   \item We assume that the data we collect is true and valid.
 \end{itemize}
 \subsection{Data Analysis}
-% 表格
-% \begin{table}[]
-%   \centering
-%   \caption{My caption}
-%   \label{my-label}
-%   \setlength{\tabcolsep}{7mm}{
-%   \begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l}
-%   \shline
-%   \multicolumn{2}{lI}{\textbf{asasd}} & \multicolumn{10}{l}{\textbf{ssssssssssssssssssssss}} \\ \hline
-%   \multicolumn{2}{lI}{dddd}           & \multicolumn{10}{l}{ddddddddddddddddddddd}           \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-%   \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \shline
-%   \end{tabular}}
-%   \end{table}  
+
 
 \section{Variable Description and Research Method}
 \subsection{Variable Description}
+% 表格
+\begin{table}[h]
+  \centering
+  \caption{My caption}
+  \label{my-label}
+  \setlength{\tabcolsep}{7mm}{
+  \begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l}
+  \shline
+  \multicolumn{2}{lI}{\textbf{variable}} & \multicolumn{10}{l}{\textbf{description}} \\ \hline
+  \multicolumn{2}{lI}{GDP}           & \multicolumn{10}{l}{Gross Domestic Product per capita}           \\ \hline
+  \multicolumn{2}{lI}{REF}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
+  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \shline
+  \end{tabular}}
+  \end{table}  
 \subsection{Research Method}
 % 插图
 % \begin{figure}[h]
@@ -299,15 +253,15 @@ local wars, thus exacerbating the country's fragile state.
 
 
 \section{Fragile State Neural Network Model}
-The study of national vulnerability indicators requires strong professional
+The study of national fragility indicators requires strong professional
 background knowledge, but we can't derive the relationship between climate
-and vulnerability through an intuitive approach from the data given in the 
+and fragility through an intuitive approach from the data given in the 
 problem. So, through collecting data, by using the strong self-organization, 
 self-adaptive and self-learning ability of neural network, the nonlinear 
 mapping of independent variables and national fragility can be completed 
 without fully understanding the relationship among climate, politics, 
 economy and national fragility. Combined with the above considerations, 
-We established a neural network to derive a national vulnerability model 
+We established a neural network to derive a national fragility model 
 including climatic factors.
 \subsection{Model building}
 \subsubsection{Introduction to the principle of BP neural network}
@@ -398,7 +352,11 @@ with additional momentum:
 w\left ( k-1 \right )+\Delta w\left 
 ( k \right )+a\left [ w\left ( k-1 \right )-w\left 
 ( k-2 \right ) \right ] \]
-
+The model will eventually output two results, one is national 
+sensitivity, one is national adaptability, we define:
+\[ Fragility = Sensitivity - Adaptability \]
+Based on this formula, we are able to obtain the 
+fragility of the State through the two values of the model output
 \subsection{Model Testing}
 We get the loss function of the model as follow:\\
 \begin{figure}[h]
@@ -406,11 +364,189 @@ We get the loss function of the model as follow:\\
 \centering
 \includegraphics[width=14cm]{loss.png}
 \caption{Loss function} 
-\label{fig:ns}
+\label{fig:lf}
+\end{figure}\\
+From this picture, we can see the model is pretty accurate when 
+the training step is increased to 15.00k.
+\subsection{Task I}
+According to the output of our model, we divide it into 
+three numberical value range referring to the standard in website 
+FSI, namely 0-60, 60-90, 90-120. By normalizing them, they 
+correspond respectively to the fragile, less fragile, and stable 
+state of the country. For our definition, fragility is equal to 
+sensibility minus adaptability, so the climatic factor exerts 
+influence on the fragility by changing sensibility directly, 
+we can present the consequences visually with the line chart 
+appointing climate as independent variable, by holding other 
+factors constant. 
+\begin{figure}[h]
+  \centering
+  \begin{minipage}[h]{0.3\textwidth}
+  \centering
+  \includegraphics[width=5cm]{task1-1.png}
+  \caption{extrame weather}
+  \end{minipage}
+  \begin{minipage}[h]{0.3\textwidth}
+  \centering
+  \includegraphics[width=5cm]{task1-2.png}
+  \caption{water dependency}
+  \end{minipage}    
+  \begin{minipage}[h]{0.3\textwidth}
+  \centering
+  \includegraphics[width=5cm]{task1-3.png}
+  \caption{CRI}
+  \end{minipage}  
+\end{figure}
+As for the indirect influence of climate towards 
+fragility, firstly, we need to calculate the correlation between 
+country sensibility and other factors except for the climate, then 
+we pick up factors with strong correlation, after that, we 
+calculate the correlation between the climate factors and the 
+chosen factors, if the correlation is strong, then we can say 
+the climate exerts influence on the country fragility indirectly 
+by influencing the chosen factors.
+\begin{figure}[h]
+  \centering
+  \begin{minipage}[h]{0.3\textwidth}
+  \centering
+  \includegraphics[width=5cm]{task1-4.png}
+  \caption{extrame weather}
+  \end{minipage}
+  \begin{minipage}[h]{0.3\textwidth}
+  \centering
+  \includegraphics[width=5cm]{task1-5.png}
+  \caption{water dependency}
+  \end{minipage}    
+  \begin{minipage}[h]{0.3\textwidth}
+  \centering
+  \includegraphics[width=5cm]{task1-6.png}
+  \caption{CRI}
+  \end{minipage}  
+\end{figure}\\
+From the charts, we can see the climate mainly exerts 
+an effect on the crime index, hungry index, agriculture of 
+a country, firepower index, then increases the 
+country fragility.
+% \newpage
+\subsection{Task II}
+We choose Sultan in the ten most fragile countries given by FSI , 
+to investigate the influence that the climate exerts on the country fragility, 
+we need to hold other factors constant, because of the constant factors, 
+we can assume the country adaptability constant, the factors that influence 
+its fragility are variation of its sensibility due to the climate change, 
+change the relevant factors of climate, we get the charts below to show 
+how the climate affects its sensibility, and then fragility.
+% 这是task2的三张图
+\begin{figure}[h]
+  \begin{minipage}[h]{0.48\textwidth}
+  \flushleft
+  \includegraphics[width=8cm]{task2Weather.png}
+  \caption{extrame weather}
+  \end{minipage}
+  \begin{minipage}[h]{0.48\textwidth}
+  \flushright
+  \includegraphics[width=8cm]{task2CRI.png}
+  \caption{CRI}
+  \end{minipage} 
+\end{figure}
+% 以上是前两张，这是最后一张
+\begin{figure}[h]
+  \begin{minipage}[h]{0.50\textwidth}
+  \flushleft
+  \includegraphics[width=8cm]{task2Rain.png}
+  \caption{average precipitation in depth}
+  \end{minipage}
+\end{figure} \\
+From the graph we can see the impact of three climatic factors on fragility, 
+the impact of natural disaster indices and water resource dependency on fragility, 
+and if both are reduced, the fragility of the State can be significantly reduced.
+% \newpage
+\subsection{Task III}
+We select Turkey country out of the 10 most vulnerable countries 
+in the data given by FSI. To examine how climate impacts fragility, 
+we need to examine the impact of climate on sensitivity at a finer 
+level of granularity. Therefore, according to our hypothesis, the 
+climatic factor is only determined by extreme weather, average depth 
+of precipitation and climate sensitivity. We divide each of these 
+three factors into three levels according to different numerical 
+ranges. For each level, we set this indicator to the median of the 
+range of values ​​of that level and then set the value of the 
+sensitivity of the country by taking three different levels 
+for each of these three factors (this value is based on keeping 
+the other parameters constant, climatic factors are input into the 
+BP neural network model we set up as variables）, and the value of 
+the fragility of the country is calculated by the sensitivity 
+at this moment, then we can see which levels the fragility belongs 
+to ，fragile, less fragile, or more stable. Accordingly, we can see 
+that the critical point in which area roughly. If we need more accurate 
+critical point, we can divide these several factors into more grades, 
+the indicator each grade corresponds to is the median value of this 
+level, and then get the value of the country's fragility at this 
+time according to the different values of the several factors,then 
+look at which level of fragility the value corresponding to. 
+When the change of one factor leads to the change of the fragility 
+level, then the value of the three factors is a turning point in the 
+fragility of this country. By continually demarcating more levels, the 
+value of each factor becomes more accurate, by which we can find a 
+turning point of higher precision.
+\begin{figure}[h]
+  \begin{minipage}[h]{0.48\textwidth}
+  \flushleft
+  \includegraphics[width=8cm]{task3-1.png}
+  \caption{extrame weather}
+  \end{minipage}
+  \begin{minipage}[h]{0.48\textwidth}
+  \flushright
+  \includegraphics[width=8cm]{task3-2.png}
+  \caption{CRI}
+  \end{minipage}
+\end{figure}
+\newpage
+\subsection{Task IV}
+According to the formula we gave earlier:
+\textbf{Fragility = Sensitivity - Adaptability}, 
+because sensitivity is mainly determined by some non-state 
+factors, the impact of state intervention on fragility 
+is mainly achieved by changing the country's adaptability. 
+According to our hypothesis, the adaptability of the country 
+is only determined by GDP per capita, Health index, civil 
+rights index, government energy efficiency index, government 
+stability index and food safety index. Therefore, we can 
+determine how to conduct national intervention by observing 
+the output value of our BP neural network model and changing 
+the above parameters that affect national adaptability, to be 
+more likely to prevent the country from becoming a vulnerable 
+one. As an example, the following is the relationship between 
+sanitation index and adaptability, and the change in fragility 
+also manifests.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=10cm]{task4exp.png}
+  \caption{Sanitation}
+  \label{fig:sanitation}
 \end{figure}
 
+\begin{tabular} {|l|r|}  
+  \hline  
+  这是一个 & 紧凑的表格 \\ \hline  
+  tight & table \\ \hline  
+  \end{tabular}  
 
-
+\subsection{Task V}
+We try to enter the parameters of some larger countries and 
+smaller countries into our model and find that our model yields 
+a more accurate value for the fragility of larger countries. 
+However, for some countries with very small land areas, the 
+result of the model is not that good. Our improvement plans 
+are as follows:
+\begin{itemize}
+  \item We can try using more training sample data to improve the model.
+  \item We can increase the number of hidden layers in the model, but 
+  this may lead to over-fitting.
+  \item We can combine our existing BP neural network with genetic 
+  algorithm and use genetic algorithm to tune the characteristic 
+  parameters of BP neural network.
+\end{itemize}
 
 
 \section{Sensitivity Analysis}
@@ -422,14 +558,14 @@ We get the loss function of the model as follow:\\
 \begin{itemize}
   \item \textbf{Inclusive:} Our model contains two large indicators (sensitivity and adaptability), and 
   considers of the state's ability to intervene in natural factors such as climate. 
-  Our model incorporates all aspects of the vulnerability index. The small indicators 
+  Our model incorporates all aspects of the fragility index. The small indicators 
   in the two big indexes(sensitivity and adaptability) are composed of various political, 
-  economic, climate and social sectors.
-  \item \textbf{Quantification:} Our model can output a numerical value to quantify the vulnerability of a country. 
+  economic, climate, social and cohesion sectors.
+  \item \textbf{Quantification:} Our model can output a numerical value to quantify the fragility of a country. 
   The use of Numbers is more intuitive and more conducive to contrast, which can clearly 
-  reflect changes of the vulnerability when input parameters change.
+  reflect changes of the fragility when input parameters change.
   \item \textbf{Simple but Universal:} We use the neural network model, which is relatively simple, also does not break 
-  generality. If there is enough training data, each country's vulnerability index 
+  generality. If there is enough training data, each country's fragility index 
   can be figured out  accurate.
   \item \textbf{Visible and Understandable:} We used the plotly library of python to present the model and data 
   intuitively in the form of line graphs, which is more visualized and 
@@ -445,7 +581,7 @@ We get the loss function of the model as follow:\\
   the more accurate the model is.
   \item \textbf{Not a long-term and dynamic model:} Our model is a static 
   model focusing on short-term changes. But, on the contrast, the factors 
-  that affect vulnerability are long-term, dynamic and highly uncertain. 
+  that affect fragility are long-term, dynamic and highly uncertain. 
   In terms of long-term time scale, we need to focus on future risks, and 
   we need to consider the dynamic assessment framework that changes with time. 
 \end{itemize}
@@ -478,7 +614,7 @@ https://www.atlasandboots.com/most-dangerous-countries-in-the-world-ranked/, \\
 viewed 29th January, 2017.
 \bibitem{bib7} Basic Health Services by Country, www.worldmapper.org, \\
 http://www.worldmapper.org/display.php?selected=220, viewed 1st August, 2016.
-\bibitem{bib8} Zhang qian;Meng huixin. Social vulnerability and 
+\bibitem{bib8} Zhang qian;Meng huixin. Social fragility and 
 poverty under the influence of climate change: a review of foreign studies. 
 Journal of agricultural university of China (social science edition), 2014, 31.2: 56-67.
 \bibitem{bib9} Current World Death Rate, The World Factbook 2012,\\ 
@@ -506,10 +642,10 @@ http://info.worldbank.org/governance/wgi/index.asp, viewed 21st October, 2011.
 The Worldwide Governance Indicators (WGI) project, The World Bank Group, \\
 http://info.worldbank.org/governance/wgi/index.asp, viewed 21st October, 2011.
 \bibitem{bib18} Cutter S L, Boruff B J, Shirley W L. Social 
-Vulnerability to Environmental Hazards. Social Science 
+Fragility to Environmental Hazards. Social Science 
 Quarterly, 2003, 84: 242 - 261.
 \bibitem{bib19} O’Brien K, Eriksen S, Schjolen A, et al. What’s in a Word?, 
-Conflicting Interpretations of Vulnerability in Climate Change Research. CICERO Working Paper, 2004(4)
+Conflicting Interpretations of fragility in Climate Change Research. CICERO Working Paper, 2004(4)
 \bibitem{bib20} matlab neural network 30 case analysis, Matlab Chinese BBS, Beijing: Beijing aerospace university press, 2010.
 \end{thebibliography}
 
