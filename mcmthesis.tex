@@ -211,20 +211,28 @@ local wars, thus exacerbating the country's fragile state.
 % 表格
 \begin{table}[h]
   \centering
-  \caption{My caption}
+  \caption{Variables}
   \label{my-label}
   \setlength{\tabcolsep}{7mm}{
   \begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l}
   \shline
   \multicolumn{2}{lI}{\textbf{variable}} & \multicolumn{10}{l}{\textbf{description}} \\ \hline
-  \multicolumn{2}{lI}{GDP}           & \multicolumn{10}{l}{Gross Domestic Product per capita}           \\ \hline
-  \multicolumn{2}{lI}{REF}               & \multicolumn{10}{l}{}                                \\ \hline
-  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \hline
-  \multicolumn{2}{lI}{}               & \multicolumn{10}{l}{}                                \\ \shline
+  \multicolumn{2}{lI}{GDP}           & \multicolumn{10}{l}{Gross Domestic Product per capita}    \\ \hline
+  \multicolumn{2}{lI}{REF}           & \multicolumn{10}{l}{refugee people number}               \\ \hline
+  \multicolumn{2}{lI}{WDR}           & \multicolumn{10}{l}{water dependency ratio}            \\ \hline
+  \multicolumn{2}{lI}{ETI}           & \multicolumn{10}{l}{extreme temperatures index}         \\ \hline
+  \multicolumn{2}{lI}{NDI}           & \multicolumn{10}{l}{natural disaster index}             \\ \hline
+  \multicolumn{2}{lI}{ECD}           & \multicolumn{10}{l}{ethnic and cultural diversity index}        \\ \hline
+  \multicolumn{2}{lI}{HUG}           & \multicolumn{10}{l}{global hunger index}                                \\ \hline
+  \multicolumn{2}{lI}{AGR}           & \multicolumn{10}{l}{proportion of agricultural output in GDP}              \\ \hline
+  \multicolumn{2}{lI}{GEF}           & \multicolumn{10}{l}{government effectiveness index}              \\ \hline
+  \multicolumn{2}{lI}{FRE}           & \multicolumn{10}{l}{poeple's fredom index}              \\ \hline
+  \multicolumn{2}{lI}{STA}           & \multicolumn{10}{l}{political stability index}              \\ \hline
+  \multicolumn{2}{lI}{FIP}           & \multicolumn{10}{l}{global firepower index}              \\ \hline
+  \multicolumn{2}{lI}{DEA}           & \multicolumn{10}{l}{death rate}              \\ \hline
+  \multicolumn{2}{lI}{CRI}           & \multicolumn{10}{l}{crime index}              \\ \hline
+  \multicolumn{2}{lI}{FDS}           & \multicolumn{10}{l}{food security index}              \\ \hline
+  \multicolumn{2}{lI}{BHS}           & \multicolumn{10}{l}{basic health services index}              \\ \shline
   \end{tabular}}
   \end{table}  
 \subsection{Research Method}
@@ -522,15 +530,19 @@ also manifests.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=10cm]{task4exp.png}
-  \caption{Sanitation}
+  \caption{relation between basic health services and sensibility}
   \label{fig:sanitation}
 \end{figure}
-
-\begin{tabular} {|l|r|}  
+\begin{table}
+  \centering
+  \begin{tabular} {|c|c|c|c|c|c|c|}  
   \hline  
-  这是一个 & 紧凑的表格 \\ \hline  
-  tight & table \\ \hline  
+  Variable & GDP & FRE & GEF & FDS & BHS & STA \\ \hline  
+  Weight & 0.43 & 0.12 & 0.22 & 0.12 & 0.22 & 0.61  \\ \hline  
   \end{tabular}  
+  \caption{The weight of adaptability factors}
+\end{table} \\
+
 
 \subsection{Task V}
 We try to enter the parameters of some larger countries and 
