@@ -14,7 +14,7 @@
 \usepackage{caption}%注释设置
 \captionsetup{hypcap=true}
 
-\title{The \LaTeX{} Template for MCM Version \MCMversion}
+\title{Is my country fragile?}
 \author{\small \href{http://www.latexstudio.net/}
   {\includegraphics[width=7cm]{mcmthesis-logo}}}
 \date{\today}
@@ -34,17 +34,25 @@
 % 让引用变成右上标形式，使用\upcite
 \newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
 
-\geometry{left=2.0cm,right=2.0cm,top=2.5cm,bottom=2.5cm}
-% \geometry{top=2.5cm,bottom=2.5cm}
+% \geometry{left=2.0cm,right=2.0cm,top=2.5cm,bottom=2.5cm}
+\geometry{top=2.5cm,bottom=2.5cm}
 % 以上导言区
 \begin{document}
+\newgeometry{left=1.5cm,right=1.5cm}
 \begin{abstract}
-\lipsum[1]
+  %摘要
+  In order to solve the problem "how the climate affects national fragility", we build a model using BP neural network algorithm and establish indicators to divide the level of national vulnerability. Unlike other models of vulnerability, our model takes the impact of external factors on the vulnerability of countries into account  and accommodate the country's own resilience to these external factors, so we propose a concept that fragility is a function of sensitivity and adaptability. Instead of confining our research object to the country's natural environment influenced by climate, we treat it as a natural-economic-social composite system. \\
+  When studying this system, we comprehensively collect data on 17 factors that can be summed up in five aspects: economy, politics, society, civic cohesion and climate. The sensitivity and adaptability depend on these five aspects.
+  For Task1, we clean and normalize the data we collected, then establish the BP neural network model. Through the model output, we can get the values ​​of sensitivity and adaptability, and then use the relationship between fragility,sensitivity and adaptability to get the value of fragility and then determine the level of fragility. Through our model we can see the direct impact of climate change on fragility. Also, we figure out the correlation between economic, political, social factors and the climate, as well as the correlation between these factors and the fragility, then we explain the indirect impact of climate change on the national vulnerability through two sets of correlations.\\
+  For Task2, we chose Sudan to study the impact of climate on national fragility and analyzed how the climate change increases its fragility through the statistical chart of the output.\\
+  For Task3, we choose Turkey to study. We classify each climatic factor (extreme weather indicator, water-dependent indicator, natural disaster indicator) and use 3D scatter point graphs to illustrate the impact of the three factors on national fragility. We show the three levels of fragility in terms of the three regions that the two arcs (the critical states) are divided in this three-dimensional space. We use two arcs to divided the three-dimensional space into three regions, and we use the three regions to represent the three levels of fragility. In this way we can judge the level of fragility by the coordinates of the three factors.
+
 \begin{keywords}
 keyword1; keyword2
 \end{keywords}
 \end{abstract}
 \maketitle
+\restoregeometry
 \tableofcontents
 % \newpage
 
@@ -210,7 +218,7 @@ local wars, thus exacerbating the country's fragile state.
 \subsection{Data Analysis}
 Here, we collect data that can affect the fragility of a country. The data we collect has 
 17 groups which can be classified into five asspects, that is climate factors(including water 
-dependency ratio, extreme temperatures index, natural disaster index), cohension factors(including 
+dependency ratio, extreme temperatures index, natural disaster index), cohesion factors(including 
 refugee people number, ethnic and cultural diversity index), economic factors(GDP per capita, global 
 hunger index, proportion of agricultural output in GDP), political facators(government effectiveness 
 index, poeple's fredom index, political stability index, global firepower index), social factors(death 
@@ -231,15 +239,18 @@ Comparing the data we collected with the fragility index given by the subject, w
   \caption{water dependency}
   \end{minipage}
 \end{figure}
-It can be seen from the figure that the distribution of the three climatic factors index is basically the same on the map, and more concentrated in Africa, South Asia, which is basically the same as the distribution of the fragility index.\\
-Water dependency ratio refers to a country's dependence on water resources. When climate change has led to a change in the distribution of water resources, regions with larger water dependency ratio tend to exhibit very unoptimistic vulnerabilities. The indicator visually reflects on the map that the darker the color, the larger the value, the stronger its dependence on water resources.\\
-Extreme temperatures index,is the annual average percentage of the population that is affected by natural disasters classified as either droughts, floods, or extreme temperature events. \\
-Changes in the climate are often accompanied by extreme weather, making the index larger. This indicator visually reflects on the map as the larger the diameter of the circle, the greater the number of people affected by extreme weather.\\
-The Global Climate Risk Index analyses to what extent countries have been affected by the impacts of weather-related loss events (storms, floods, heat waves etc.).
-The indicator visually reflects on the map that the darker the color, the larger the value, the more it is affected.
+\newpage
+It can be seen from the figure that the distribution of the three climatic factors index is basically the same on the map, and more concentrated in Africa, South Asia, which is basically the same as the distribution of the fragility index.
+\begin{itemize}
+  \item Water dependency ratio refers to a country's dependence on water resources. When climate change has led to a change in the distribution of water resources, regions with larger water dependency ratio tend to exhibit very unoptimistic vulnerabilities. The indicator visually reflects on the map that the darker the color, the larger the value, the stronger its dependence on water resources.
+  \item Extreme temperatures index,is the annual average percentage of the population that is affected by natural disasters classified as either droughts, floods, or extreme temperature events. Changes in the climate are often accompanied by extreme weather, making the index larger. This indicator visually reflects on the map as the larger the diameter of the circle, the greater the number of people affected by extreme weather.
+  \item The Global Climate Risk Index analyses to what extent countries have been affected by the impacts of weather-related loss events (storms, floods, heat waves etc.) The indicator visually reflects on the map that the darker the color, the larger the value, the more it is affected.
+\end{itemize}
 
-\subsubsection{Cohension Factors}
+
+\subsubsection{Cohesion Factors}
 In general, race and religion are a very important factor affecting the stability of a country. Without effective government control, various kinds of racial and religious affairs in a country mostly lead to instability. The increasing number of refugees in a country can also intensify the complexity of the social situation and put the country on the brink of peril.\\
+Comparing the data that we collected with the fragility index given by the subject, we find that in most of the cases, the country with high number of refugees and more varied ethnic and religious diversity has the higher fragility index, such as Africa and Central Asia. So we come to the conclude that this part of the data is valid.\\
 \begin{figure}[h]
   \centering
   \begin{minipage}[h]{0.48\textwidth}
@@ -253,14 +264,18 @@ In general, race and religion are a very important factor affecting the stabilit
   \caption{death rate}
   \end{minipage}
 \end{figure}
-Comparing the data that we collected with the fragility index given by the subject, we find that in most of the cases, the country with high number of refugees and more varied ethnic and religious diversity has the higher fragility index, such as Africa and Central Asia. So we come to the conclude that this part of the data is valid.\\
-It can be seen from the figure that the distribution of the two cohesion factor indices basically coincides with each other on the map froming overlapping parts and is mostly concentrated in Africa, Central Asia and other regions, which is basically the same as that of the fragility index.\\
-One country's refugees are people whose residence are in this country but lose their homes and means of livelihood. The indicator reflects intuitively on a map as a dot. The larger the size, the greater the number of refugees.\\
-Ethnic and cultural diversity index is the quality of diverse or different cultures and ethnicity. The indicator visually reflects on the map that the darker the color, the greater the religious and ethnic diversity.
+\newpage
+It can be seen from the figure that the distribution of the two cohesion factor indices basically coincides with each other on the map froming overlapping parts and is mostly concentrated in Africa, Central Asia and other regions, which is basically the same as that of the fragility index.
+\begin{itemize}
+  \item One country's refugees are people whose residence are in this country but lose their homes and means of livelihood. The indicator reflects intuitively on a map as a dot. The larger the size, the greater the number of refugees.
+  \item Ethnic and cultural diversity index is the quality of diverse or different cultures and ethnicity. The indicator visually reflects on the map that the darker the color, the greater the religious and ethnic diversity.
+\end{itemize}
+
 
 \subsubsection{Economic Factors}
 The economic foundation determines the superstructure. An economically underdeveloped country must be a backward country. The higher the share of agriculture in the GDP of a country, the greater the impact on the country from climate change.
 Comparing the data we collected with the fragility index given by the subject, we find that the country with higher fragility index, in most of the cases, is in poor economic conditions and has the large share of agriculture in the GDP.  So we can conclude that this part of the data is valid.\\
+The figure shows that the distribution of the three economic factors basically displays as coincidence on the map and is mostly concentrated in Africa, which is basically the same as that of the fragility index.
 \begin{figure}[h]
   \centering
   \begin{minipage}[h]{0.48\textwidth}
@@ -274,11 +289,11 @@ Comparing the data we collected with the fragility index given by the subject, w
   \caption{proportion of agricultural output in GDP}
   \end{minipage}
 \end{figure}
-The figure shows that the distribution of the three economic factors basically displays as coincidence on the map and is mostly concentrated in Africa, which is basically the same as that of the fragility index.\\
-GDP per capita is often considered as an indicator of a country's standard of living. The indicator shows visually on the map that the darker the color, the higher the index.\\
-The Global Hunger Index (GHI) is a tool adapted and further developed by the International Food Policy Research Institute (IFPRI) to comprehensively measure and track global hunger.\\
-Each color in this figure corresponds to a certain value. The larger the value is, the more people in hungry the country has.\\
-The dependence of the national economy on climate depends on the proportion of agricultural output in GDP. The colors in the figure correspond to the corresponding values, the larger the value is, the stronger the dependence.
+\begin{itemize}
+  \item GDP per capita is often considered as an indicator of a country's standard of living. The indicator shows visually on the map that the darker the color, the higher the index.
+  \item The Global Hunger Index (GHI) is a tool adapted and further developed by the International Food Policy Research Institute (IFPRI) to comprehensively measure and track global hunger. Each color in this figure corresponds to a certain value. The larger the value is, the more people in hungry the country has.
+  \item The dependence of the national economy on climate depends on the proportion of agricultural output in GDP. The colors in the figure correspond to the corresponding values, the larger the value is, the stronger the dependence.
+\end{itemize}
 
 \subsubsection{Political Facators}
 A strong government often can effectively deal with various external factors that may interfere with the stability of the country. Government effectiveness is an important indicator of national fragility. At the same time, the situation in the region is also a very important factor.\\
@@ -295,14 +310,18 @@ Comparing the data we collected with the fragility index given by the subject, w
   \includegraphics[width=7cm]{govef.png}
   \caption{government effectiveness index}
   \end{minipage}
-\end{figure}
-It can be seen from the figure that the distribution of the strength of the three political factors index basically coincide on the map and are mostly concentrated in the African.This is basically the same as the distribution of fragility.Government effectiveness index reflecs perceptions of the quality of public services, the quality of the civil service and the degree of its independence from the political pressures. The colors in the figure correspond to the corresponding values. The lower the values, the worse the government’s effectiveness.\\
-People's freedom index, measures the degree of civil liberties and political rights in every nation and significant related and disputed territories around the world. The colors in the figure corresponds to the corresponding values. The lower the value, the lower the freedom index of citizens.\\
-Political stability index reflects perceptions of the likelihood that the government will be destabilized or overthrown by unconstitutional or violent means. The colors in the figure correspond to corresponding values. The lower the value, the worse the political stability.\\
-Firepower index is based strictly on each nation's potential conventional war-making capability across land, sea and air .The color in the figure corresponds to the corresponding values.The larger the values，the war is more likely.
+\end{figure}\\
+It can be seen from the figure that the distribution of the strength of the three political factors index basically coincide on the map and are mostly concentrated in the African.This is basically the same as the distribution of fragility.Government effectiveness index reflecs perceptions of the quality of public services, the quality of the civil service and the degree of its independence from the political pressures. The colors in the figure correspond to the corresponding values. The lower the values, the worse the government’s effectiveness.
+\begin{itemize}
+  \item Government effectiveness index reflecs perceptions of the quality of public services, the quality of the civil service and the degree of its independence from the political pressures. The colors in the figure correspond to the corresponding values. The lower the values, the worse the government’s effectiveness.
+  \item People's freedom index, measures the degree of civil liberties and political rights in every nation and significant related and disputed territories around the world. The colors in the figure corresponds to the corresponding values. The lower the value, the lower the freedom index of citizens.
+  \item Political stability index reflects perceptions of the likelihood that the government will be destabilized or overthrown by unconstitutional or violent means. The colors in the figure correspond to corresponding values. The lower the value, the worse the political stability.
+  \item Firepower index is based strictly on each nation's potential conventional war-making capability across land, sea and air. The color in the figure corresponds to the corresponding values. The larger the values，the war is more likely.
+\end{itemize}
 
 \subsubsection{Socical Facators}
-We choose four indices including death rate, crime index, food security index and basic health services index as social factors measuring country fragility, crime index can measure the situation of a country's social stability. Food security index and basic health services index is related to physical condition of national citizens ,death rate can measure the living situation of national citizens. While comparing the data we collected with the fragility index given by the topic, we can see, in most condition, the poorer the economy condition is the higher the country fragility index is,meanwhile, the higher the proportion agriculture occupies in GDP, the higher the index is. Thus, we can conclude these data as valid.\\
+We choose four indices including death rate, crime index, food security index and basic health services index as social factors measuring country fragility, crime index can measure the situation of a country's social stability. Food security index and basic health services index is related to physical condition of national citizens ,death rate can measure the living situation of national citizens.\\
+While comparing the data we collected with the fragility index given by the topic, we can see, in most condition, the poorer the economy condition is the higher the country fragility index is,meanwhile, the higher the proportion agriculture occupies in GDP, the higher the index is. Thus, we can conclude these data as valid.
 \begin{figure}[h]
   \centering
   \begin{minipage}[h]{0.48\textwidth}
@@ -316,14 +335,14 @@ We choose four indices including death rate, crime index, food security index an
   \caption{food security index}
   \end{minipage}
 \end{figure}
-As we can see in the map, the degree of these three social factors is basically coincident, mainly aggregate in Africa, which is basically the same as the distribution of fragility index.\\
-Crime index is an evaluation of criminal frequency in a country, the colors in the map correspond to different value, the higher the value, the higher the seriousness of crime is.\\
-Food security index, provides a worldwide perspective on which countries are the most and least vulnerable to food insecurity. The colors in the map correspond to different value. The higher the value is, the higher the degree of food security is.\\
-Basic health services index reflects the degree of dissemination of health services in a country, the higher the value is, the higher the degree of health servicei dissemination is.\\
-Death rate compares the average annual number of deaths during a year per 1,000 population at midyear, reflects the social stability of a country indirectly, the colors in the map correspond to different value. The higher the value is, the higher the death rate is.
-
-
-
+As we can see in the map, the degree of these three social factors is basically coincident, mainly aggregate in Africa, which is basically the same as the distribution of fragility index.
+\begin{itemize}
+  \item Crime index is an evaluation of criminal frequency in a country, the colors in the map correspond to different value, the higher the value, the higher the seriousness of crime is.
+  \item Food security index, provides a worldwide perspective on which countries are the most and least vulnerable to food insecurity. The colors in the map correspond to different value. The higher the value is, the higher the degree of food security is.
+  \item Basic health services index reflects the degree of dissemination of health services in a country, the higher the value is, the higher the degree of health servicei dissemination is.
+  \item Death rate compares the average annual number of deaths during a year per 1,000 population at midyear, reflects the social stability of a country indirectly, the colors in the map correspond to different value. The higher the value is, the higher the death rate is.
+\end{itemize}
+\newpage
 \section{Variable Description}
 % 表格
 \begin{table}[h]
@@ -353,7 +372,6 @@ Death rate compares the average annual number of deaths during a year per 1,000 
   \multicolumn{2}{lI}{BHS}           & \multicolumn{10}{l}{basic health services index}              \\ \shline
   \end{tabular}}
   \end{table}  
-\newpage
 % 插图
 % \begin{figure}[h]
 % \small
@@ -409,7 +427,7 @@ is like Figure \ref{fig:nn} as follow.\upcite{bib20}
 \label{fig:nn}
 \end{figure}
 
-
+\newpage
 \subsubsection{Data preprocessing}
 Based on our hypothesis, the fragility of a country is related to its 
 sensitivity and adaptability. Sensitivity and adaptability are closely 
@@ -426,7 +444,7 @@ convenient for our model. The normalization method is as follows:
 \[ y=\frac{\left ( y_{max}-y_{min} \right )\left ( x-x_{min} \right )}{x_{max}-x_{min}}+y_{min} \]
 With the above formula, we can begin to build our model after the data we have 
 collected is normalized. This can be done by calling the transform() function 
-of sklearn.
+of sklearn. 
 \subsubsection{Establish BP Neural Network}
 We used Google's machine learning framework, TensorFlow, to establish the BP 
 neural network structure of x-n-2, where X represents the input item (that is, 
@@ -436,10 +454,11 @@ as follows:
 \begin{figure}[h]
 \small
 \centering
-\includegraphics[width=12cm]{structure.png}
+\includegraphics[width=10cm]{structure.png}
 \caption{Network Structure} 
 \label{fig:ns}
 \end{figure}\\
+\newpage
 We choose ReLU(Rectified Linear Unit) as hidden layer excitation function:
 \[ f=max\left ( 0,w^{T}x+b \right ) \]
 And linear function as the output layer Excitation function:
@@ -484,16 +503,20 @@ sensitivity, one is national adaptability, we define:
 Based on this formula, we are able to obtain the 
 fragility of the State through the two values of the model output
 \subsection{Model Testing}
-We get the loss function of the model as follow:\\
+We use 70\% of the data set as the training data set, and the rest is used as a test data set.And we use MSE to evaluate the model.
+\[MSE=\frac{1}{n}\sum_{n}^{t-1}\left ( observed_{t} -predicted_{t}\right)^{2}\]
+
+We get the loss of the model as follow:\\
 \begin{figure}[h]
 \small
 \centering
 \includegraphics[width=14cm]{loss.png}
-\caption{Loss function} 
+\caption{Loss} 
 \label{fig:lf}
 \end{figure}\\
-From this picture, we can see the model is pretty accurate when 
-the training step is increased to 15.00k.
+
+Finally, MSE converges to 0.12
+The model is pretty accurate when the training step is increased to 15.00k.
 \subsection{Task I}
 According to the output of our model, we divide it into 
 three numberical value range referring to the standard in website 
@@ -586,7 +609,7 @@ how the climate affects its sensibility, and then fragility.
 From the graph we can see the impact of three climatic factors on fragility, 
 the impact of natural disaster indices and water resource dependency on fragility, 
 and if both are reduced, the fragility of the State can be significantly reduced.
-% \newpage
+\newpage
 \subsection{Task III}
 We select Turkey out of the 10 most vulnerable countries in the data given by FSI. To examine how the climate affects fragility, we assume that climatic factors are determined only by extreme weather, water dependence ratio, and natual disaster index.\\
 We take these three factors as independent variables to establish three-dimensional coordinate system, and a divide each factors into five levels according to different numerical range，and take the median of each level range as the value of this level input to the model. That is to say, we only need to input a three-dimensional coordinate that we can get the fragility output.\\
@@ -603,8 +626,8 @@ Because the coordinate system is three-dimensional, we classify the degree of fr
   \caption{CRI}
   \end{minipage}
 \end{figure} \\
-If we need a more precise interface, we can do this by dividing these factors into more levels. By continually dividing more levels, the value of each factor becomes more accurate, so that we can find a more accurate critical surface.
 \newpage
+If we need a more precise interface, we can do this by dividing these factors into more levels. By continually dividing more levels, the value of each factor becomes more accurate, so that we can find a more accurate critical surface.
 \subsection{Task IV}
 According to the formula we gave earlier:
 \textbf{Fragility = Sensitivity - Adaptability}, 
@@ -622,6 +645,7 @@ more likely to prevent the country from becoming a vulnerable
 one. As an example, the following is the relationship between 
 sanitation index and adaptability, and the change in fragility 
 also manifests.
+\newpage
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=10cm]{task4exp.png}
@@ -759,19 +783,11 @@ Conflicting Interpretations of fragility in Climate Change Research. CICERO Work
 % 附录
 \begin{appendices}
 
-\section{First appendix}
+\section{Code}
 
-\lipsum[13]
+\textbf{\textcolor[rgb]{0.98,0.00,0.00}{Input python source:}}
+\lstinputlisting[language=Python]{./code/mcmthesis-matlab1.m}
 
-Here are simulation programmes we used in our model as follow.\\
-
-\textbf{\textcolor[rgb]{0.98,0.00,0.00}{Input matlab source:}}
-\lstinputlisting[language=Matlab]{./code/mcmthesis-matlab1.m}
-
-\section{Second appendix}
-
-some more text \textcolor[rgb]{0.98,0.00,0.00}{\textbf{Input C++ source:}}
-\lstinputlisting[language=C++]{./code/mcmthesis-sudoku.cpp}
 
 \end{appendices}
 \end{document}
