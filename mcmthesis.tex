@@ -60,8 +60,8 @@
 % 让引用变成右上标形式，使用\upcite
 \newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
 
-% \geometry{left=2.0cm,right=2.0cm,top=2.5cm,bottom=2.5cm}
-\geometry{top=2.5cm,bottom=2.5cm}
+\geometry{left=2.0cm,right=2.0cm,top=2.5cm,bottom=2.5cm}
+% \geometry{top=2.5cm,bottom=2.5cm}
 % 以上导言区
 \begin{document}
 \begin{abstract}
@@ -119,11 +119,11 @@ extreme weather events will reduce the recovery time of poverty population,
 and keep them in a fragile state for a long time. Some underdeveloped 
 countries not only have to deal with the risks posed by climate change, 
 but also have to deal with the impact of economic globalization, 
-and are more vulnerable to failure.This phenomenon is called vulnerability.\\\\
+and are more vulnerable to failure. This phenomenon is called vulnerability.\\\\
 In recent years, many international organizations have conducted vulnerability 
 assessments in developing countries. The United States Agency for International
 Development (USAID) famine warning system focuses on the vulnerability of 
-food security in African regions.The Vulnerability Assessment committee(VAC) 
+food security in African regions. The Vulnerability Assessment committee(VAC) 
 evaluated the comprehensive vulnerability of six African countries food safety 
 and living condition. The Department for International Development (DFID)
 focuses on rural sustainable Development and poverty alleviation in developing
@@ -132,11 +132,12 @@ policymakers to understand the influence of environmental changes,
 to explore potential factors hinder the social effective response, 
 to understand the vulnerable population distribution and the causes 
 of vulnerability, and find out the ways to reduce vulnerability and 
-increase the adaptability.\\\\
+increase the adaptability.
+\subsection{Previous Research}
 At present, many studies devote to evaluate natural ecosystem vulnerability, 
 and has built many widely used quantitative methods,to figure out the 
 vulnerability level and distribution of the natural ecological system, 
-to predict the adaptation of natural ecosystems to risk in the future.However, 
+to predict the adaptation of natural ecosystems to risk in the future. However, 
 scientists, policymakers, and ngos tend to focus more on regional 
 vulnerability assessments, in order to connect with decisions. Different 
 from the natural ecosystem, region is a natural-economic-social complex 
@@ -146,7 +147,7 @@ natural disasters and limited resources, meanwhile,they adapt and transform
 the natural environment, using natural material and energy to develop itself.
 Due to the complexity of the system in the region, it is difficult to 
 quantitatively assess its vulnerability thus causing a gap in widely-used 
-quantitative method.In the context of climate change, the situation in some
+quantitative method. In the context of climate change, the situation in some
 less-developed regions of the world will be severely affected, so it is 
 particularly urgent to identify vulnerable areas and take measures to 
 address them.
@@ -155,7 +156,7 @@ address them.
 \subsection{Restatement of the Problem}
 A fragile state inherently exists vulnerability of natural conditions 
 like natural disasters, the decrease of the cultivated land, unpredictable 
-weather and rising temperature.coupled with the turbulent political situation, 
+weather and rising temperature. Coupled with the turbulent political situation, 
 backward economic development, poor sanitation, the condition will get worse. 
 Therefore, when considering the impact of climate on national vulnerability, 
 it is not possible to consider only one single factor of climate, but also to
@@ -195,7 +196,7 @@ consideration to country's ability to resist pressure and adapt.
   we can get the sensitivity and adaptability values. Through the function of 
   vulnerability and sensitivity and adaptability, the vulnerability value and the 
   vulnerability level can be obtained. Through our model, we can see \textbf{the direct 
-  impact of vulnerability caused by climate change}.The influence of climate on other 
+  impact of vulnerability caused by climate change}. The influence of climate on other 
   factors in work\_3 shows \textbf{the indirect effect of vulnerability of the caused by 
   climate change}.\\\\
   \textbf{Work\_5, choose one country from the top ten ranking, determine how climate 
@@ -205,7 +206,7 @@ consideration to country's ability to resist pressure and adapt.
   climate factors affect its vulnerability.}\\\\
   \textbf{Work\_7, Identify indicators of national vulnerability:} We grade each 
   climate factor(extreme weather, average precipitation depth, climate 
-  sensitivity index) .The country's vulnerability level is determined 
+  sensitivity index). The country's vulnerability level is determined 
   by these three factors and is shown through by a list.\\\\
   \textbf{work\_8, sum up intervention measurements that can mitigate the risk of climate change.}\\\\
   \textbf{work\_9, evaluate the application scope of the model:} We select a country with large 
@@ -213,7 +214,31 @@ consideration to country's ability to resist pressure and adapt.
   XXX) to evaluate the application scope of the model. And modify the model 
   to make it applicable to more general situations.
 \section{Analysis of Problem}
-
+\subsection{How to define national vulnerability?}
+With the deepening of the research on vulnerability, the concept of vulnerability 
+based on different subject background is also developing.\\\\
+Cutter divided the vulnerability research into three categories: first, the 
+vulnerability was considered as exposure; The second is to regard vulnerability 
+as a social condition; The third is the combination of potential exposure 
+and social elasticity.\upcite{bib18} O 'brien has a similar division, "vulnerability 
+as a result" and "vulnerability as a precondition".\upcite{bib19} According to the 
+description of the data given in the title, we regard the state system as a 
+natural-economic-social complex system, and regard vulnerability as "the fragility 
+as the result". We classify national vulnerability factors as economic, political, 
+social, civic cohesion and climate change, each of which includes several detailed 
+indicators. We define vulnerability as the degree to which the system is susceptible 
+to adverse effects and lack of the ability to cope with adverse effects. We also 
+define that vulnerability is a function of sensitivity and adaptability. 
+Sensitivity is the degree to which the system is stimulated caused by multiple 
+realted factors. Adaptability is the ability of a system's internal activity, 
+process, structure to adapt to the external influence, and the ability to reduce 
+potential losses from climate change.
+\subsection{How to reflect the direct and indirect effects of climate change on national vulnerability?}
+Climate change can cause direct harm to people's living environment through natural 
+disasters.It can also affect agricultural production, thereby increasing 
+poverty and even starvation.If combined with weak government effectiveness, 
+there could be more serious consequences such as political instability and 
+local wars, thus exacerbating the country's fragile state.
 \section{General Assumptions and Data Analysis}
 \subsection{General Assumptions}
 \begin{itemize}
@@ -288,9 +313,9 @@ including climatic factors.
 \subsubsection{Introduction to the principle of BP neural network}
 BP Neural Network is a kind of multi-layer feedforward neural network, 
 which is mainly characterized by forward transmission and deviation back 
-propagation.In forward transmission, the input signal is processed from 
-the input layer through the hidden layer to the output layer.The state of 
-each layer of neurons affects only the next layer of neurons.If the output 
+propagation. In forward transmission, the input signal is processed from 
+the input layer through the hidden layer to the output layer. The state of 
+each layer of neurons affects only the next layer of neurons. If the output 
 layer does not get the desired output, it is transferred to the reverse 
 propagation, and the network weight and threshold are adjusted according 
 to the predicted error, so that the BP neural network prediction output 
@@ -320,7 +345,7 @@ for the normalized processing, allow them to operations in the same numerical ra
 convenient for our model. The normalization method is as follows:
 \[ y=\frac{\left ( y_{max}-y_{min} \right )\left ( x-x_{min} \right )}{x_{max}-x_{min}}+y_{min} \]
 With the above formula, we can begin to build our model after the data we have 
-collected is normalized.This can be done by calling the transform() function 
+collected is normalized. This can be done by calling the transform() function 
 of sklearn.
 \subsubsection{Establish BP Neural Network}
 We used Google's machine learning framework, TensorFlow, to establish the BP 
@@ -334,7 +359,7 @@ as follows:
 \includegraphics[width=12cm]{structure.png}
 \caption{Network Structure} 
 \label{fig:ns}
-\end{figure}
+\end{figure}\\
 We choose ReLU(Rectified Linear Unit) as hidden layer excitation function:
 \[ f=max\left ( 0,w^{T}x+b \right ) \]
 And linear function as the output layer Excitation function:
@@ -349,10 +374,32 @@ of hidden layer neurons.
 \[ l< n-1 \]
 \[ l<\sqrt{m+n}+a \]
 \[ l=\log_{2} n \]
+In the formula, n is the input layer node number, L is the hidden 
+layer node number, M is the output layer node number, A is the constant 
+between the 0~10. In practical problems, the selection of the number 
+of hidden layer nodes first uses the reference formula to determine 
+the approximate range of the number of nodes, and then the optimal 
+node number is determined by the method of trial-and-order. After 
+many experiments, we choose n=100, at this time the BP neural network 
+achieves high precision. Learning speed also has an important influence 
+on the BP neural network, the learning speed is too small, the 
+network learning is slow, need to increase the training times, the 
+learning speed is too big, the network learns quickly, but easily 
+leads to the network not to converge, affects the training precision. 
+We finally decided to study at a speed of 0.01, training times 300. 
+bp neural network using gradient correction method as weights and 
+thresholds of learning algorithm, from the network prediction error 
+in the negative gradient direction correction weights and thresholds, 
+not to consider the accumulation of previous experience, learning 
+process convergence is slow. For this problem, the additional momentum 
+method can be used to solve the weighted value learning formula 
+with additional momentum:
+\[ w\left ( k \right )=
+w\left ( k-1 \right )+\Delta w\left 
+( k \right )+a\left [ w\left ( k-1 \right )-w\left 
+( k-2 \right ) \right ] \]
 
-
-
-\section{Model Testing}
+\subsection{Model Testing}
 
 \section{Sensitivity Analysis}
 \subsection{Impact of x}
@@ -401,25 +448,56 @@ of hidden layer neurons.
 % 论文引用
 \newpage
 \begin{thebibliography}{99}
-\bibitem{bib1} Average precipitation in depth, The World Bank, \\ https://data.worldbank.org/indicator/AG.LND.PRCP.MM?name\_desc=false, 2017.
-\bibitem{bib2} Droughts, floods, extreme temperatures (\% of population, average 1990-2009), The World Bank, https://data.worldbank.org/indicator/EN.CLC.MDAT.ZS, 1990-2009.
-\bibitem{bib3} Global Climate Risk Index, The World Bank,\\http://search.worldbank.org/data?qterm=climate+change\&language=\&format=, viewed 7th January, 2016.
-\bibitem{bib4} DEATH RATE, "The World Factbook". Cia.gov, \\https://www.cia.gov/library/publications/the-world-factbook/rankorder/2066rank.htmlRetrieved 2014-02-21.
+\bibitem{bib1} Average precipitation in depth, The World Bank, \\ 
+https://data.worldbank.org/indicator/AG.LND.PRCP.MM?name\_desc=false, 
+2017.
+\bibitem{bib2} Droughts, floods, extreme temperatures (\% of 
+population, average 1990-2009), The World Bank, 
+https://data.worldbank.org/indicator/EN.CLC.MDAT.ZS, 1990-2009.
+\bibitem{bib3} Global Climate Risk Index, The World Bank,\\
+http://search.worldbank.org/data?qterm=climate+change\&language=\&format=,
+\\viewed 7th January, 2016.
+\bibitem{bib4} DEATH RATE, "The World Factbook". Cia.gov, 
+\\https://www.cia.gov/library/publications/the-world-factbook/rankorder/2066rank.html,\\ 
+Retrieved 2014-02-21.
 \bibitem{bib5} Global Food Security Index, Food Security Index, viewed 2nd February, 2016, foodsecurityindex.eiu.com.
-\bibitem{bib6} Most Dangerous Countries in the World., ATLAS \& BOOTS,\\ https://www.atlasandboots.com/most-dangerous-countries-in-the-world-ranked/, viewed 29th January, 2017.
-\bibitem{bib7} Basic Health Services by Country, www.worldmapper.org, \\http://www.worldmapper.org/display.php?selected=220, viewed 1st August, 2016.
-\bibitem{bib8} Zhang qian;Meng huixin. Social vulnerability and poverty under the influence of climate change: a review of foreign studies. Journal of agricultural university of China (social science edition), 2014, 31.2: 56-67.
-\bibitem{bib9} Current World Death Rate, The World Factbook 2012,\\ https://www.cia.gov/library/publications/the-world-factbook/rankorder/2066rank.html, viewed 27th November, 2012.
+\bibitem{bib6} Most Dangerous Countries in the World, ATLAS \& BOOTS,\\ 
+https://www.atlasandboots.com/most-dangerous-countries-in-the-world-ranked/, \\
+viewed 29th January, 2017.
+\bibitem{bib7} Basic Health Services by Country, www.worldmapper.org, \\
+http://www.worldmapper.org/display.php?selected=220, viewed 1st August, 2016.
+\bibitem{bib8} Zhang qian;Meng huixin. Social vulnerability and 
+poverty under the influence of climate change: a review of foreign studies. 
+Journal of agricultural university of China (social science edition), 2014, 31.2: 56-67.
+\bibitem{bib9} Current World Death Rate, The World Factbook 2012,\\ 
+https://www.cia.gov/library/publications/the-world-factbook/rankorder/2066rank.html, \\
+viewed 27th November, 2012.
 \bibitem{bib10} Refugee population by country or territory of origin, https://data.worldbank.org.
-\bibitem{bib11} A. Alesina, E. La Ferrara (2005). Ethnic Diversity and Economic Performance. Journal of Economic Literature: 762–800. Retrieved December 15, 2016.
-\bibitem{bib12} GDP per capita (current US\$),The World Bank. Accessed on 26 December 2016, Liechtenstein updated 6. November 2016.
-\bibitem{bib13} Global Hunger Index, International Food Policy Research Institute (IFPRI) 2011, Global Hunger Index - 2011, \\http://www.ifpri.org/publication/2011-global-hunger-index, viewed 17th October, 2011.
-\bibitem{bib14} Freedom in the World 2017, freedomhouse.org,\\ https://freedomhouse.org/report/freedom-world/freedom-world-2017, viewed 15th September, 2017.
-\bibitem{bib15} Global FirePower Index, GFP, \\http://www.globalfirepower.com/countries-listing.asp, viewed 15th February, 2016.
-\bibitem{bib16} Government Effectiveness, The Worldwide Governance Indicators (WGI) project, The World Bank Group, http://info.worldbank.org/governance/wgi/index.asp, viewed 21st October, 2011.
-\bibitem{bib17} Political Stability and Absence of Violence/Terrorism, The Worldwide Governance Indicators (WGI) project, The World Bank Group, \\http://info.worldbank.org/governance/wgi/index.asp,\\ viewed 21st October, 2011.
-\bibitem{bib18} Cutter S L, Boruff B J, Shirley W L. Social Vulnerability to Environmental Hazards. Social Science Quarterly,2003,84: 242 - 261.
-\bibitem{bib19} O’Brien K, Eriksen S, Schjolen A, et al. What’s in a Word?, Conflicting Interpretations of Vulnerability in Climate Change Research． CICERO Working Paper, 2004(4)
+\bibitem{bib11} A. Alesina, E. La Ferrara (2005). Ethnic Diversity and Economic 
+Performance. Journal of Economic Literature: 762–800. Retrieved December 15, 2016.
+\bibitem{bib12} GDP per capita (current US\$),The World Bank. Accessed on 26 December 
+2016, Liechtenstein updated 6. November 2016.
+\bibitem{bib13} Global Hunger Index, International Food Policy Research Institute 
+(IFPRI) 2011, Global Hunger Index - 2011,
+http://www.ifpri.org/publication/2011-global-hunger-index, \\ 
+viewed 17th October, 2011.
+\bibitem{bib14} Freedom in the World 2017, freedomhouse.org,\\ 
+https://freedomhouse.org/report/freedom-world/freedom-world-2017, \\ 
+viewed 15th September, 2017.
+\bibitem{bib15} Global FirePower Index, GFP,
+http://www.globalfirepower.com/countries-listing.asp, \\ 
+viewed 15th February, 2016.
+\bibitem{bib16} Government Effectiveness, The Worldwide Governance 
+Indicators (WGI) project, The World Bank Group, 
+http://info.worldbank.org/governance/wgi/index.asp, viewed 21st October, 2011.
+\bibitem{bib17} Political Stability and Absence of Violence/Terrorism, 
+The Worldwide Governance Indicators (WGI) project, The World Bank Group, \\
+http://info.worldbank.org/governance/wgi/index.asp, viewed 21st October, 2011.
+\bibitem{bib18} Cutter S L, Boruff B J, Shirley W L. Social 
+Vulnerability to Environmental Hazards. Social Science 
+Quarterly, 2003, 84: 242 - 261.
+\bibitem{bib19} O’Brien K, Eriksen S, Schjolen A, et al. What’s in a Word?, 
+Conflicting Interpretations of Vulnerability in Climate Change Research. CICERO Working Paper, 2004(4)
 \bibitem{bib20} matlab neural network 30 case analysis, Matlab Chinese BBS, Beijing: Beijing aerospace university press, 2010.
 \end{thebibliography}
 
