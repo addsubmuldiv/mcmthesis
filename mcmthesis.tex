@@ -41,12 +41,12 @@
 \newgeometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1cm}
 \begin{abstract}
   %摘要
-  In order to solve the problem "how the climate affects national fragility", we build a model using \textbf{BP neural network} algorithm and establish indicators to divide the level of national vulnerability. Unlike other models of vulnerability, our model takes the impact of external factors on the vulnerability of countries into account  and accommodate the country's own resilience to these external factors, so we propose a concept that fragility is a function of \textbf{sensitivity} and \textbf{adaptability}. Instead of confining our research object to the country's natural environment influenced by climate, we treat it as a \textbf{natural-economic-social composite system}. \\
+  In order to solve the problem "how the climate affects national fragility", we build a model using \textbf{BP Neural Network} algorithm and establish indicators to divide the level of national fragility. Unlike other models of fragility, our model takes the impact of external factors on the fragility of countries into account  and accommodate the country's own resilience to these external factors, so we propose a concept that fragility is a function of \textbf{sensitivity} and \textbf{adaptability}. Instead of confining our research object to the country's natural environment influenced by climate, we treat it as a \textbf{natural-economic-social composite system}. \\
   When studying this system, we comprehensively collect data on 17 factors that can be summed up in five aspects: economy, politics, society, civic cohesion and climate. The sensitivity and adaptability depend on these five aspects.
-  \textbf{For Task1}, we clean and normalize the data we collected, then establish the BP neural network model. Through the model output, we can get the values ​​of sensitivity and adaptability, and then use the relationship between fragility,sensitivity and adaptability to get the value of fragility and then determine the level of fragility. Through our model we can see the direct impact of climate change on fragility. Also, we figure out the correlation between economic, political, social factors and the climate, as well as the correlation between these factors and the fragility, then we explain the indirect impact of climate change on the national vulnerability through two sets of correlations.\\
+  \textbf{For Task1}, we clean and normalize the data we collected, then establish the BP Neural Network model. Through the model output, we can get the values ​​of sensitivity and adaptability, and then use the relationship between fragility, sensitivity and adaptability to get the value of fragility and then determine the level of fragility. Through our model we can see the direct impact of climate change on fragility. Also, we figure out the correlation between economic, political, social factors and the climate, as well as the correlation between these factors and the fragility, then we explain the indirect impact of climate change on the national fragility through two sets of correlations.\\
   \textbf{For Task2}, we chose Sudan to study the impact of climate on national fragility and analyzed how the climate change increases its fragility through the statistical chart of the output.\\
   \textbf{For Task3}, we choose Turkey to study. We classify each climatic factor (extreme weather indicator, water-dependent indicator, natural disaster indicator) and use 3D scatter point graphs to illustrate the impact of the three factors on national fragility. We show the three levels of fragility in terms of the three regions that the two arcs (the critical states) are divided in this three-dimensional space. We use two arcs to divided the three-dimensional space into three regions, and we use the three regions to represent the three levels of fragility. In this way we can judge the level of fragility by the coordinates of the three factors\\
-  \textbf{For Task4}, we analyze the adaptability  which is one of the two major factors of fragility. We arrive at the correlation between various data and adaptablity indicators and, through these correlations, give ways to prevent countries from becoming vulnerable to climatic factors through human intervention: to develop the economy and to strengthen the stability of the government.\\
+  \textbf{For Task4}, we analyze the adaptability  which is one of the two major factors of fragility. We arrive at the correlation between various data and adaptability indicators and, through these correlations, give ways to prevent countries from becoming vulnerable to climatic factors through human intervention: to develop the economy and to strengthen the stability of the government.\\
   \textbf{For Task5}, we use our model to analyze some of the larger countries(for example, Australia) and the smaller countries(for example,Korea), finding that our model is more accurate for larger countries and less so for smaller countries. Therefore, we propose three schemes to improve the model, and finally use the genetic algorithm. 
 
 % \begin{keywords}
@@ -97,7 +97,7 @@ of fragility, and find out the ways to reduce fragility and
 increase the adaptability.
 \subsection{Previous Research}
 At present, many studies devote to evaluate natural ecosystem fragility, 
-and has built many widely used quantitative methods,to figure out the 
+and has built many widely used quantitative methods, to figure out the 
 fragility level and distribution of the natural ecological system, 
 to predict the adaptation of natural ecosystems to risk in the future. However, 
 scientists, policymakers, and ngos tend to focus more on regional 
@@ -105,7 +105,7 @@ fragility assessments, in order to connect with decisions. Different
 from the natural ecosystem, region is a natural-economic-social complex 
 system, so the fragility of the natural ecosystem does not necessarily lead 
 to a vulnerable. Human suffer from environmental impact and risk, such as 
-natural disasters and limited resources, meanwhile,they adapt and transform 
+natural disasters and limited resources, meanwhile, they adapt and transform 
 the natural environment, using natural material and energy to develop itself.
 Due to the complexity of the system in the region, it is difficult to 
 quantitatively assess its fragility thus causing a gap in widely-used 
@@ -141,12 +141,12 @@ consideration to country's ability to resist pressure and adapt.
   multiple factors. The fragility of the country is related to the country's 
   climate sensitivity index, economic development status, social stability and 
   other factors.\\\\
-  \textbf{Work\_2, collect data on factors affecting national fragility:} The data we
+  \textbf{Work\_3, collect data on factors affecting national fragility:} The data we
   collect include sensitivity data (Extreme weather、water dependency ratio、Climate
   sensitivity index、Food security index、National risk index、Health index、mortality、
   Crime index、global firepower index, hunger index,  proportion of agricultural output 
   in GDP, ethnic diversity and refugee Numbers) and adaptability data(GDP per capita, 
-  Poeple's Fredom index, Government Effectiveness index, Political Stability index).\\\\
+  People's Fredom index, Government Effectiveness index, Political Stability index).\\\\
   \textbf{Work\_3, calculate the correlation between climate and other factors:}  
   we calculate the relevance of various factors about economic, political, social and climatic 
   that can affect the fragility of the country, then choose factors that are clearly relevant 
@@ -197,13 +197,13 @@ indicators. We define fragility as the degree to which the system is susceptible
 to adverse effects and lack of the ability to cope with adverse effects. We also 
 define that fragility is a function of sensitivity and adaptability. 
 Sensitivity is the degree to which the system is stimulated caused by multiple 
-realted factors. Adaptability is the ability of a system's internal activity, 
+related factors. Adaptability is the ability of a system's internal activity, 
 process, structure to adapt to the external influence, and the ability to reduce 
 potential losses from climate change.
 \subsection{How to reflect the direct and indirect effects of climate change on national fragility?}
 Climate change can cause direct harm to people's living environment through natural 
-disasters.It can also affect agricultural production, thereby increasing 
-poverty and even starvation.If combined with weak government effectiveness, 
+disasters. It can also affect agricultural production, thereby increasing 
+poverty and even starvation. If combined with weak government effectiveness, 
 there could be more serious consequences such as political instability and 
 local wars, thus exacerbating the country's fragile state.
 \section{General Assumptions and Data Analysis}
@@ -211,19 +211,19 @@ local wars, thus exacerbating the country's fragile state.
 \begin{itemize}
   \item We ignore the effects of individual factors on the model caused by year inconsistency.
   \item We assume that the overall fragility of the country is only determined by national sensitivity and adaptability.
-  \item We assume that countries sensitivity index is determined only by extreme weather、water dependency ratio、climate sensitivity index、food security index、national risk index、health index、mortality、arime index、global firepower index, hunger index,  proportion of agricultural output in GDP, ethnic diversity and refugee Numbers.
-  \item We assume that national adaptability is determined only by GDP per capita, Poeple's Fredom index, Government Effectiveness index, Political Stability index.
+  \item We assume that countries sensitivity index is determined only by extreme weather、water dependency ratio、climate sensitivity index、food security index、national risk index、health index、mortality、crime index、global firepower index, hunger index,  proportion of agricultural output in GDP, ethnic diversity and refugee Numbers.
+  \item We assume that national adaptability is determined only by GDP per capita, Poeple's Freedom index, Government Effectiveness index, Political Stability index.
   \item We assume that the factors other are independent and non-interference, but climate is not included.
   \item We assume that fragility can be effectively quantified by the above data.
   \item We assume that the data we collect is true and valid.
 \end{itemize}
 \subsection{Data Analysis}
 Here, we collect data that can affect the fragility of a country. The data we collect has 
-17 groups which can be classified into five asspects, that is climate factors(including water 
+17 groups which can be classified into five aspects, that is climate factors(including water 
 dependency ratio, extreme temperatures index, natural disaster index), cohesion factors(including 
 refugee people number, ethnic and cultural diversity index), economic factors(GDP per capita, global 
 hunger index, proportion of agricultural output in GDP), political facators(government effectiveness 
-index, poeple's fredom index, political stability index, global firepower index), social factors(death 
+index, people's freedom index, political stability index, global firepower index), social factors(death 
 rate, crime index, food security index, basic health services index).
 \subsubsection{Climate Factors}
 Climate change can lead to frequent climate disasters - excessive rainfall, widespread droughts and prolonged high temperatures，it can also increase the risk and mortality of diseases and increase the spread of infectious diseases, thus directly affecting the country's fragility.\\
@@ -245,7 +245,7 @@ Comparing the data we collected with the fragility index given by the subject, w
 It can be seen from the figure that the distribution of the three climatic factors index is basically the same on the map, and more concentrated in Africa, South Asia, which is basically the same as the distribution of the fragility index.
 \begin{itemize}
   \item Water dependency ratio refers to a country's dependence on water resources. When climate change has led to a change in the distribution of water resources, regions with larger water dependency ratio tend to exhibit very unoptimistic vulnerabilities. The indicator visually reflects on the map that the darker the color, the larger the value, the stronger its dependence on water resources.
-  \item Extreme temperatures index,is the annual average percentage of the population that is affected by natural disasters classified as either droughts, floods, or extreme temperature events. Changes in the climate are often accompanied by extreme weather, making the index larger. This indicator visually reflects on the map as the larger the diameter of the circle, the greater the number of people affected by extreme weather.
+  \item Extreme temperatures index, is the annual average percentage of the population that is affected by natural disasters classified as either droughts, floods, or extreme temperature events. Changes in the climate are often accompanied by extreme weather, making the index larger. This indicator visually reflects on the map as the larger the diameter of the circle, the greater the number of people affected by extreme weather.
   \item The Global Climate Risk Index analyses to what extent countries have been affected by the impacts of weather-related loss events (storms, floods, heat waves etc.) The indicator visually reflects on the map that the darker the color, the larger the value, the more it is affected.
 \end{itemize}
 
@@ -267,7 +267,7 @@ Comparing the data that we collected with the fragility index given by the subje
   \end{minipage}
 \end{figure}
 \newpage
-It can be seen from the figure that the distribution of the two cohesion factor indices basically coincides with each other on the map froming overlapping parts and is mostly concentrated in Africa, Central Asia and other regions, which is basically the same as that of the fragility index.
+It can be seen from the figure that the distribution of the two cohesion factor indices basically coincides with each other on the map forming overlapping parts and is mostly concentrated in Africa, Central Asia and other regions, which is basically the same as that of the fragility index.
 \begin{itemize}
   \item One country's refugees are people whose residence are in this country but lose their homes and means of livelihood. The indicator reflects intuitively on a map as a dot. The larger the size, the greater the number of refugees.
   \item Ethnic and cultural diversity index is the quality of diverse or different cultures and ethnicity. The indicator visually reflects on the map that the darker the color, the greater the religious and ethnic diversity.
@@ -313,17 +313,17 @@ Comparing the data we collected with the fragility index given by the subject, w
   \caption{government effectiveness index}
   \end{minipage}
 \end{figure}\\
-It can be seen from the figure that the distribution of the strength of the three political factors index basically coincide on the map and are mostly concentrated in the African.This is basically the same as the distribution of fragility.Government effectiveness index reflecs perceptions of the quality of public services, the quality of the civil service and the degree of its independence from the political pressures. The colors in the figure correspond to the corresponding values. The lower the values, the worse the government’s effectiveness.
+It can be seen from the figure that the distribution of the strength of the three political factors index basically coincide on the map and are mostly concentrated in the African. This is basically the same as the distribution of fragility. Government effectiveness index reflects perceptions of the quality of public services, the quality of the civil service and the degree of its independence from the political pressures. The colors in the figure correspond to the corresponding values. The lower the values, the worse the government’s effectiveness.
 \begin{itemize}
-  \item Government effectiveness index reflecs perceptions of the quality of public services, the quality of the civil service and the degree of its independence from the political pressures. The colors in the figure correspond to the corresponding values. The lower the values, the worse the government’s effectiveness.
+  \item Government effectiveness index reflects perceptions of the quality of public services, the quality of the civil service and the degree of its independence from the political pressures. The colors in the figure correspond to the corresponding values. The lower the values, the worse the government’s effectiveness.
   \item People's freedom index, measures the degree of civil liberties and political rights in every nation and significant related and disputed territories around the world. The colors in the figure corresponds to the corresponding values. The lower the value, the lower the freedom index of citizens.
   \item Political stability index reflects perceptions of the likelihood that the government will be destabilized or overthrown by unconstitutional or violent means. The colors in the figure correspond to corresponding values. The lower the value, the worse the political stability.
   \item Firepower index is based strictly on each nation's potential conventional war-making capability across land, sea and air. The color in the figure corresponds to the corresponding values. The larger the values，the war is more likely.
 \end{itemize}
 
-\subsubsection{Socical Facators}
-We choose four indices including death rate, crime index, food security index and basic health services index as social factors measuring country fragility, crime index can measure the situation of a country's social stability. Food security index and basic health services index is related to physical condition of national citizens ,death rate can measure the living situation of national citizens.\\
-While comparing the data we collected with the fragility index given by the topic, we can see, in most condition, the poorer the economy condition is the higher the country fragility index is,meanwhile, the higher the proportion agriculture occupies in GDP, the higher the index is. Thus, we can conclude these data as valid.
+\subsubsection{Socical Factors}
+We choose four indices including death rate, crime index, food security index and basic health services index as social factors measuring country fragility, crime index can measure the situation of a country's social stability. Food security index and basic health services index is related to physical condition of national citizens, death rate can measure the living situation of national citizens.\\
+While comparing the data we collected with the fragility index given by the topic, we can see, in most condition, the poorer the economy condition is the higher the country fragility index is, meanwhile, the higher the proportion agriculture occupies in GDP, the higher the index is. Thus, we can conclude these data as valid.
 \begin{figure}[h]
   \centering
   \begin{minipage}[h]{0.48\textwidth}
@@ -341,7 +341,7 @@ As we can see in the map, the degree of these three social factors is basically 
 \begin{itemize}
   \item Crime index is an evaluation of criminal frequency in a country, the colors in the map correspond to different value, the higher the value, the higher the seriousness of crime is.
   \item Food security index, provides a worldwide perspective on which countries are the most and least vulnerable to food insecurity. The colors in the map correspond to different value. The higher the value is, the higher the degree of food security is.
-  \item Basic health services index reflects the degree of dissemination of health services in a country, the higher the value is, the higher the degree of health servicei dissemination is.
+  \item Basic health services index reflects the degree of dissemination of health services in a country, the higher the value is, the higher the degree of health service dissemination is.
   \item Death rate compares the average annual number of deaths during a year per 1,000 population at midyear, reflects the social stability of a country indirectly, the colors in the map correspond to different value. The higher the value is, the higher the death rate is.
 \end{itemize}
 \newpage
@@ -410,7 +410,7 @@ economy and national fragility. Combined with the above considerations,
 We established a neural network to derive a national fragility model 
 including climatic factors.
 \subsection{Model building}
-\subsubsection{Introduction to the principle of BP neural network}
+\subsubsection{Introduction to the principle of BP Neural Network}
 BP Neural Network is a kind of multi-layer feedforward neural network, 
 which is mainly characterized by forward transmission and deviation back 
 propagation. In forward transmission, the input signal is processed from 
@@ -418,7 +418,7 @@ the input layer through the hidden layer to the output layer. The state of
 each layer of neurons affects only the next layer of neurons. If the output 
 layer does not get the desired output, it is transferred to the reverse 
 propagation, and the network weight and threshold are adjusted according 
-to the predicted error, so that the BP neural network prediction output 
+to the predicted error, so that the BP Neural Network prediction output 
 is constantly approaching the expected output. A simple BP Neural Network 
 is like Figure \ref{fig:nn} as follow.\upcite{bib20}
 \begin{figure}[h]
@@ -444,12 +444,12 @@ and some data is within the scope of a single wave, so we each data respectively
 for the normalized processing, allow them to operations in the same numerical range, 
 convenient for our model. The normalization method is as follows:
 \[ y=\frac{\left ( y_{max}-y_{min} \right )\left ( x-x_{min} \right )}{x_{max}-x_{min}}+y_{min} \]
-With the above formula, we can begin to build our model after the data we have 
+With the formula above, we can begin to build our model after the data we have 
 collected is normalized. This can be done by calling the transform() function 
 of sklearn. 
 \subsubsection{Establish BP Neural Network}
 We used Google's machine learning framework, TensorFlow, to establish the BP 
-neural network structure of x-n-2, where X represents the input item (that is, 
+Neural Network structure of x-n-2, where X represents the input item (that is, 
 the data mentioned in the data analysis); N is the number of hidden layer neurons; 2 
 represents the output item (sensitivity and adaptability). The structure diagram is 
 as follows:
@@ -466,7 +466,7 @@ We choose ReLU(Rectified Linear Unit) as hidden layer excitation function:
 And linear function as the output layer Excitation function:
 \[ a=n \]
 The number of hidden layer neurons has a significant influence on 
-the prediction accuracy of BP neural network. If the number of 
+the prediction accuracy of BP Neural Network. If the number of 
 nodes is too few, the network will not learn well and the accuracy 
 will be not enough. If the number of nodes is too many, the 
 training time increases, the network is easy to be overfitting. 
@@ -481,14 +481,14 @@ between the 0~10. In practical problems, the selection of the number
 of hidden layer nodes first uses the reference formula to determine 
 the approximate range of the number of nodes, and then the optimal 
 node number is determined by the method of trial-and-order. After 
-many experiments, we choose n=100, at this time the BP neural network 
+many experiments, we choose n=100, at this time the BP Neural Network 
 achieves high precision. Learning speed also has an important influence 
-on the BP neural network, the learning speed is too small, the 
+on the BP Neural Network, the learning speed is too small, the 
 network learning is slow, need to increase the training times, the 
 learning speed is too big, the network learns quickly, but easily 
 leads to the network not to converge, affects the training precision. 
 We finally decided to study at a speed of 0.01, training times 300. 
-bp neural network using gradient correction method as weights and 
+BP Neural Network using gradient correction method as weights and 
 thresholds of learning algorithm, from the network prediction error 
 in the negative gradient direction correction weights and thresholds, 
 not to consider the accumulation of previous experience, learning 
@@ -505,7 +505,7 @@ sensitivity, one is national adaptability, we define:
 Based on this formula, we are able to obtain the 
 fragility of the State through the two values of the model output
 \subsection{Model Testing}
-We use 70\% of the data set as the training data set, and the rest is used as a test data set.And we use MSE to evaluate the model.
+We use 70\% of the data set as the training data set, and the rest is used as a test data set. And we use MSE to evaluate the model.
 \[MSE=\frac{1}{n}\sum_{n}^{t-1}\left ( observed_{t} -predicted_{t}\right)^{2}\]
 
 We get the loss of the model as follow:\\
@@ -521,7 +521,7 @@ Finally, MSE converges to 0.12
 The model is pretty accurate when the training step is increased to 15.00k.
 \subsection{Task I}
 According to the output of our model, we divide it into 
-three numberical value range referring to the standard in website 
+three numerical value range referring to the standard in website 
 FSI, namely 0-60, 60-90, 90-120. By normalizing them, they 
 correspond respectively to the fragile, less fragile, and stable 
 state of the country. For our definition, fragility is equal to 
@@ -613,7 +613,7 @@ the impact of natural disaster indices and water resource dependency on fragilit
 and if both are reduced, the fragility of the State can be significantly reduced.
 \newpage
 \subsection{Task III}
-We select Turkey out of the 10 most vulnerable countries in the data given by FSI. To examine how the climate affects fragility, we assume that climatic factors are determined only by extreme weather, water dependence ratio, and natual disaster index.\\
+We select Turkey out of the 10 most vulnerable countries in the data given by FSI. To examine how the climate affects fragility, we assume that climatic factors are determined only by extreme weather, water dependence ratio, and natural disaster index.\\
 We take these three factors as independent variables to establish three-dimensional coordinate system, and a divide each factors into five levels according to different numerical range，and take the median of each level range as the value of this level input to the model. That is to say, we only need to input a three-dimensional coordinate that we can get the fragility output.\\
 Because the coordinate system is three-dimensional, we classify the degree of fragility by finding the isosurface of a particular value. We define isosurface which is equal to 90 (normalized to 0.75) divides  "fragility" and "less fragile", the isosurface which is equal to 60 (normalized to 0.43) divides "less fragile" and "stable".
 \begin{figure}[h]
@@ -642,7 +642,7 @@ is only determined by GDP per capita, Health index, civil
 rights index, government energy efficiency index, government 
 stability index and food safety index. Therefore, we can 
 determine how to conduct national intervention by observing 
-the output value of our BP neural network model and changing 
+the output value of our BP Neural Network model and changing 
 the above parameters that affect national adaptability, to be 
 more likely to prevent the country from becoming a vulnerable 
 one. As an example, the following is the relationship between 
@@ -681,9 +681,9 @@ are as follows:
   \item We can try using more training sample data to improve the model.
   \item We can increase the number of hidden layers in the model, but 
   this may lead to over-fitting.
-  \item We can combine our existing BP neural network with genetic 
+  \item We can combine our existing BP Neural Network with genetic 
   algorithm and use genetic algorithm to tune the characteristic 
-  parameters of BP neural network.
+  parameters of BP Neural Network.
 \end{itemize}
 \begin{figure}[htbp]
   \centering
@@ -702,7 +702,7 @@ are as follows:
   \textbf{States} & \textbf{Accuracy(MSE) before improving} & \textbf{Accuracy(MSE) after improving}\\ \hline
   Somalia   & 0.08   & 0.19  \\ \hline
   Haiti   & 0.11   & 0.09            \\ \hline
-  Zambabwe   & 0.04   & 0.16         \\ \hline
+  Zimbabwe   & 0.04   & 0.16         \\ \hline
   Monaco   & 0.03   & 0.05    \\ \hline
   Laos   & 0.07   & 0.14          \\ \hline
   India   & 0.06   & 0.10     \\ \hline
