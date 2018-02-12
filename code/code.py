@@ -18,7 +18,8 @@ def add_layer(inputs, in_size, out_size, n_layer, activation_function=None):
     layer_name = 'layer%s' % n_layer
     with tf.name_scope(layer_name):
         with tf.name_scope('weights'):
-            Weights = tf.Variable(tf.random_normal([in_size, out_size]), name='W')
+            Weights = tf.Variable(tf.random_normal([in_size, out_size]), 
+            			name='W')
             tf.summary.histogram(layer_name + '/weights', Weights)
         with tf.name_scope('biases'):
             biases = tf.Variable(tf.zeros([1, out_size]) + 0.1, name='b')
@@ -53,15 +54,21 @@ with tf.name_scope('inputs'):
     ys = tf.placeholder(tf.float32, [None, 1], name='y_input')   
 
 # add hidden layer
-l1_1 = add_layer(xs[:,0:10], 10, 20, n_layer='hidden1_1', activation_function=tf.nn.relu)
-l1_2 = add_layer(xs[:,10:18], 7, 20, n_layer='hidden1_2', activation_function=tf.nn.relu)
+l1_1 = add_layer(xs[:,0:10], 10, 20, n_layer='hidden1_1', 
+		activation_function=tf.nn.relu)
+l1_2 = add_layer(xs[:,10:18], 7, 20, n_layer='hidden1_2', 
+		activation_function=tf.nn.relu)
 
-l2_1 = add_layer(l1_1, 20, 5, n_layer='hidden2_1', activation_function=tf.nn.relu)
-l2_2 = add_layer(l1_2, 20, 5, n_layer='hidden2_2', activation_function=tf.nn.relu)
+l2_1 = add_layer(l1_1, 20, 5, n_layer='hidden2_1', 
+		activation_function=tf.nn.relu)
+l2_2 = add_layer(l1_2, 20, 5, n_layer='hidden2_2', 
+		activation_function=tf.nn.relu)
 
 # add output layer
-prediction = add_layer(l2_1, 5, 1, n_layer='prediction1', activation_function=None)
-prediction2 = add_layer(l2_2, 5, 1, n_layer='prediction2', activation_function=None)
+prediction = add_layer(l2_1, 5, 1, n_layer='prediction1', 
+				activation_function=None)
+prediction2 = add_layer(l2_2, 5, 1, n_layer='prediction2', 
+				activation_function=None)
 
 with tf.name_scope('loss'):
     loss = tf.reduce_mean(tf.reduce_sum(tf.square(ys - (prediction)),
@@ -72,7 +79,8 @@ with tf.name_scope('train'):
     train_step = tf.train.GradientDescentOptimizer(0.0001).minimize(loss)
 
 with tf.name_scope('acc'):
-    acc = tf.reduce_mean(tf.reduce_sum(tf.square(ys - (prediction-prediction2)),
+    acc = tf.reduce_mean(tf.reduce_sum(tf.square(ys - 
+    										(prediction-prediction2)),
                                         reduction_indices=[1]))
     tf.summary.scalar('acc', acc)
 
@@ -89,12 +97,6 @@ for i in range(100000):
     if i % 50 == 0:
         result,acc = sess.run([merged,test],
                           feed_dict={xs: x_data, ys: y_data})
-        # print(sess.run(loss,feed_dict={xs:x_data,ys:y_data}))
-        # print(sess.run(tf.reduce_mean(tf.reduce_sum(prediction,reduction_indices=[1])),feed_dict={xs:x_data,ys:y_data}))
-        # print(sess.run(tf.reduce_mean(tf.reduce_sum(prediction,reduction_indices=[1])),feed_dict={xs:x_data,ys:y_data}))
-        # print(sess.run(tf.reduce_sum(prediction2,reduction_indices=[1]),feed_dict={xs:x_data,ys:y_data}))
-        # print(sess.run(tf.reduce_mean(tf.reduce_sum(tf.square(ys - (prediction-prediction2)),
-        #                                 reduction_indices=[1])), feed_dict={xs: x_data_test, ys: y_data_test}))
         writer.add_summary(result, i)
 
 a = []
@@ -113,13 +115,15 @@ for i in points:
             x_data[N][C] = i
             x_data[N][R] = j
             x_data[N][E] = k
-            #print(min_max_scaler.inverse_transform(sess.run(ys-(prediction-prediction2),feed_dict={xs: x_data, ys: y_data})))
-            #a = min_max_scaler_y.inverse_transform(sess.run(tf.reduce_mean(tf.square(ys-(prediction-prediction2))),feed_dict={xs: x_data, ys: y_data}))
-            a.append(sess.run(tf.reduce_mean(prediction[N]-prediction2[N]),feed_dict={xs: x_data, ys: y_data}))
+            a.append(sess.run(tf.reduce_mean(prediction[N]-prediction2[N]),
+            			feed_dict={xs: x_data, ys: y_data}))
             b.append(x_data[N][C]) #全球平均值
-            c.append(sess.run(tf.reduce_mean(prediction[N]),feed_dict={xs: x_data, ys: y_data}))
-            d.append(sess.run(tf.reduce_mean(prediction2[N]),feed_dict={xs: x_data, ys: y_data}))
+            c.append(sess.run(tf.reduce_mean(prediction[N]),
+            			feed_dict={xs: x_data, ys: y_data}))
+            d.append(sess.run(tf.reduce_mean(prediction2[N]),
+            			feed_dict={xs: x_data, ys: y_data}))
             print(i,j,k)
 #print(a,b,c,d)
-mse = sess.run(tf.reduce_mean(tf.square(ys-(prediction-prediction2))),,feed_dict={xs: x_data, ys: y_data})
+mse = sess.run(tf.reduce_mean(tf.square(ys-(prediction-prediction2))),
+			feed_dict={xs: x_data, ys: y_data})
 #print(mse)

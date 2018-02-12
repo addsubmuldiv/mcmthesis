@@ -38,14 +38,16 @@
 \geometry{top=2.5cm,bottom=2.5cm}
 % 以上导言区
 \begin{document}
-\newgeometry{left=1.5cm,right=1.5cm}
+\newgeometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1cm}
 \begin{abstract}
   %摘要
   In order to solve the problem "how the climate affects national fragility", we build a model using BP neural network algorithm and establish indicators to divide the level of national vulnerability. Unlike other models of vulnerability, our model takes the impact of external factors on the vulnerability of countries into account  and accommodate the country's own resilience to these external factors, so we propose a concept that fragility is a function of sensitivity and adaptability. Instead of confining our research object to the country's natural environment influenced by climate, we treat it as a natural-economic-social composite system. \\
   When studying this system, we comprehensively collect data on 17 factors that can be summed up in five aspects: economy, politics, society, civic cohesion and climate. The sensitivity and adaptability depend on these five aspects.
   For Task1, we clean and normalize the data we collected, then establish the BP neural network model. Through the model output, we can get the values ​​of sensitivity and adaptability, and then use the relationship between fragility,sensitivity and adaptability to get the value of fragility and then determine the level of fragility. Through our model we can see the direct impact of climate change on fragility. Also, we figure out the correlation between economic, political, social factors and the climate, as well as the correlation between these factors and the fragility, then we explain the indirect impact of climate change on the national vulnerability through two sets of correlations.\\
   For Task2, we chose Sudan to study the impact of climate on national fragility and analyzed how the climate change increases its fragility through the statistical chart of the output.\\
-  For Task3, we choose Turkey to study. We classify each climatic factor (extreme weather indicator, water-dependent indicator, natural disaster indicator) and use 3D scatter point graphs to illustrate the impact of the three factors on national fragility. We show the three levels of fragility in terms of the three regions that the two arcs (the critical states) are divided in this three-dimensional space. We use two arcs to divided the three-dimensional space into three regions, and we use the three regions to represent the three levels of fragility. In this way we can judge the level of fragility by the coordinates of the three factors.
+  For Task3, we choose Turkey to study. We classify each climatic factor (extreme weather indicator, water-dependent indicator, natural disaster indicator) and use 3D scatter point graphs to illustrate the impact of the three factors on national fragility. We show the three levels of fragility in terms of the three regions that the two arcs (the critical states) are divided in this three-dimensional space. We use two arcs to divided the three-dimensional space into three regions, and we use the three regions to represent the three levels of fragility. In this way we can judge the level of fragility by the coordinates of the three factors\\
+  For Task4, we analyze the adaptability  which is one of the two major factors of fragility. We arrive at the correlation between various data and adaptablity indicators and, through these correlations, give ways to prevent countries from becoming vulnerable to climatic factors through human intervention: to develop the economy and to strengthen the stability of the government.\\
+  For Task5, we use our model to analyze some of the larger countries(for example, Australia) and the smaller countries(for example,Korea), finding that our model is more accurate for larger countries and less so for smaller countries. Therefore, we propose three schemes to improve the model, and finally use the genetic algorithm. 
 
 \begin{keywords}
 keyword1; keyword2
@@ -682,6 +684,36 @@ are as follows:
   algorithm and use genetic algorithm to tune the characteristic 
   parameters of BP neural network.
 \end{itemize}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=12cm]{zaojia.png}
+  \caption{Genetic Algorithm with BP Neural Network}
+\end{figure}
+\begin{table}[h]
+  \linespread{1.0}
+  \centering
+  \caption{Comparison}
+  \label{my-label}
+  \setlength{\tabcolsep}{7mm}{
+  \begin{tabular}{c|p{3cm}<{\centering}|p{3cm}<{\centering}}
+  \shline
+  \textbf{States} & \textbf{Accuracy(MSE) before improving} & \textbf{Accuracy(MSE) after improving}\\ \hline
+  Somalia   & 0.08   & 0.19  \\ \hline
+  Haiti   & 0.11   & 0.09            \\ \hline
+  Zambabwe   & 0.04   & 0.16         \\ \hline
+  Monaco   & 0.03   & 0.05    \\ \hline
+  Laos   & 0.07   & 0.14          \\ \hline
+  India   & 0.06   & 0.10     \\ \hline
+  Australia   & 0.07   & 0.08                            \\ \hline
+  Brazil   & 0.03   & 0.08          \\ \hline
+  Russia   & 0.07   & 0.09           \\ \shline
+  \end{tabular}}
+  \end{table} 
+  \newpage 
+  As can be seen from the table, the accuracy improved after the optimization of genetic algorithm.
+
+
+
 
 
 \section{Strengths and Weaknesses}
@@ -786,11 +818,30 @@ Conflicting Interpretations of fragility in Climate Change Research. CICERO Work
 \section{Code}
 
 \textbf{\textcolor[rgb]{0.98,0.00,0.00}{Input python source:}}
-\lstinputlisting[language=Python]{./code/mcmthesis-matlab1.m}
+\lstinputlisting[language=Python]{./code/code.py}
 
-
+\section{Data}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=15cm]{data1.png}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=15cm]{data2.png}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=15cm]{data3.png}
+\end{figure}
+\newpage
+\section{Training Process}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=14cm]{training.png}
+\end{figure}
 \end{appendices}
 \end{document}
+
 
 %% 
 %% This work consists of these files mcmthesis.dtx,
